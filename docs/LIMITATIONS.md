@@ -1,0 +1,24 @@
+# Scientific and reproduction limits
+
+All 44 Gold-based frozen panel lists are supplied, together with saved Gold, external, partner-shuffled, and paired common-512 scores and reusable CPU verification. This does not enable full training or historical GPU inference.
+
+- All 114 trained checkpoint binaries and their private hashes are excluded. Pretrained ESM2 weights/caches, complete execution environments and dirty execution history are absent. Current sampler source is reusable research code, not proof of exact historical execution.
+- Prediction-level verification covers:
+  - 432 original unshuffled 1024-residue Gold cells (`results/pointwise/E005_core/**`, cohort `E005_core`);
+  - 432 corrected 512-residue replay Gold cells (`results/pointwise/E003_corrected_replay/**`, cohort `E003_corrected_replay`);
+  - 432 broken-pair partner-shuffled 1024-residue control cells (`results/pointwise/E005_primary/**`, cohort `E005_primary`, kept explicitly distinct from unshuffled `E005_core`);
+  - 432 corrected 512-residue partner-shuffled cells (`results/shuffle_pointwise/E003_corrected_512_shuffle/**`);
+  - 1,152 external prediction cells across 512 (`E003`, 576 cells) and 1024 (`E005`, 576 cells) (`results/external_pointwise/**`);
+  - 864 paired 512-vs-1024 prediction cells evaluated on the identical frozen 512 test pairs (`results/common_512_pointwise/**`);
+  - 72 Fully Random 1024 Gold cells (`results/fully_random_pointwise/**`) and 24 Fully Random external cells (`results/fully_random_external_pointwise/**`, covering all 96 Fully Random cells at prediction level);
+  - 864 validation-thresholded MCC, F1, and balanced-accuracy cells (`results/tables/reported_mcc.csv`, 432 E003 + 432 E005_core) with all 144 validation-selected thresholds (`results/tables/validation_selected_thresholds_144_units.csv`) and all 72 `E005_core` validation prediction columns (`results/validation_pointwise/E005_core/**`). Historical `E003` per-row validation predictions (72 units) were never saved historically on the cluster; scalar validation thresholds are preserved in `results/tables/validation_selected_thresholds_144_units.csv`.
+- All 42 trained `dscript_esm2` checkpoints across E001 (9), E002 (3), E003 (12), and E005 (18) are verified via run configs, token cache contracts, and checkpoint `projection.0.weight` byte dimensions (`256,000` bytes = `(100, 640)` `float32`) to have used **ESM2-150M** (`facebook/esm2_t30_150M_UR50D`, layer 30, 640-d), not `ESM2-650M` (`results/tables/dscript_esm2_backbone_provenance_42_units.csv`).
+- All 864 final saved Vidal stratum metric rows are included, with the corrected protein-identity gate. Exact-sequence train-plus-validation counts are 6,035 neither seen and 2,107 at least one seen in 8,142 rows. Corrected protein-identity counts are 4,045 / 3,786 / 311 unresolved; the crosswalk-only mapping path is a different population and is not substituted. Raw-minus-clipped AUROC differences reach 0.0006616285; clipping can create ties.
+- External datasets' exact historical raw database dumps and Lambourne Data S4 upstream archive are not all redistributed in this package; however, all 1,152 scored external prediction cells (`results/external_pointwise/**`) with pair `row_id`, `interaction_label`, sequence SHA256 hashes (for E003), and model scores are included.
+- All 21 R2 PDFs referenced in the revised manuscript are provided as frozen, metadata-sanitized vector figures (plus 11 convergence diagnostic PDFs). Supported redraws from metric tables are not exact layout regeneration of all historical supplemental plots. The old submitted PDF was not recovered for exact comparison.
+- Three seeds describe run variability. Pair bootstrap describes fixed-model test-row sensitivity; left-endpoint grouping does not fully handle dependence through both endpoints. No significance/equivalence claim follows from three seeds.
+- E003 reused 216 earlier evaluated cells and added 216; prior pilot results had been inspected. E005 had 72 new fits. Fully Random had 12 fits and changed training **and matched validation**, so it does not isolate training-only effects.
+- Training retention is 13,304/81,596 at 512 and 49,164/81,596 at 1024. Eligibility and negatives also change; matched-test comparisons are not causal length-only effects or full-Gold coverage.
+- HuRI's zero reported collisions apply only to 185,737/560,382 screenable pairs (33.14%). No global biological false-negative rate is inferred. Exact-sequence novelty is not family novelty. Pair dependence is not proof of physical-interface recognition.
+
+No fits, GPU evaluation, remote writes or new scientific experiments were performed to assemble this resource.

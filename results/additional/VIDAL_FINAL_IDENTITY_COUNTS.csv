@@ -1,0 +1,4 @@
+reference,cohort,dimension,stratum,rows
+Gold train plus validation,1024,resolved_protein_identity,neither_seen,4045
+Gold train plus validation,1024,resolved_protein_identity,at_least_one_seen,3786
+Gold train plus validation,1024,resolved_protein_identity,unresolved,311

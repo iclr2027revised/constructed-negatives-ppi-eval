@@ -1,0 +1,22 @@
+{
+  "direction": "E005_minus_E003",
+  "identical_frozen_test_rows": true,
+  "input_predictions_modified": false,
+  "metric_convention": "historical_native_summary_AP_AUROC",
+  "outputs": {
+    "paired_common_test_intervals.csv": {
+      "rows": 144
+    },
+    "paired_common_test_seed_metrics.csv": {
+      "rows": 432
+    }
+  },
+  "probability_clip": [
+    1e-07,
+    0.9999999
+  ],
+  "replicates": 2000,
+  "resampling_scheme": "paired_stratified_positive_negative_shared_rows",
+  "schema_version": "ppi_shift.e005_common_test_uncertainty.v1",
+  "seed_base": 1729
+}

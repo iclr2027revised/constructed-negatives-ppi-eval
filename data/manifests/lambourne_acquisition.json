@@ -1,0 +1,19 @@
+{
+  "accessed": "2026-11-13",
+  "doi": "10.5281/zenodo.14968584",
+  "files": [
+    {
+      "checksum": "md5:4a2144e5bc86a840e630518f10ae17b9",
+      "id": "297df97a-e4f9-4ea4-9649-03b775dbd88e",
+      "key": "TF_isoforms_paper_data_dir_v2.tar.gz",
+      "links": {
+        "self": "https://zenodo.org/api/records/14968584/files/TF_isoforms_paper_data_dir_v2.tar.gz/content"
+      },
+      "size": 3768481116
+    }
+  ],
+  "historical_equivalence": "NOT_ESTABLISHED; obtain original Data S4 and clone mapping to reconcile, not a substitute for missing scores",
+  "license": {
+    "id": "cc-by-4.0"
+  }
+}

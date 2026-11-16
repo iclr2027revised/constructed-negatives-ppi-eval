@@ -1,0 +1,11 @@
+model,metric,mean,sd,n,kind,auprc_prevalence_baseline
+symmetric_frozen_esm2_pair_mlp,auroc,0.6910325434624119,0.0038453499315961597,3,model,0.5
+tuna_corrected,auroc,0.7227148621293044,0.0026357500753031006,3,model,0.5
+dscript_esm2,auroc,0.5808311097196185,0.07705775007017097,3,model,0.5
+rapppid,auroc,0.5250112487056012,0.0029482741747876243,3,model,0.5
+strictly_additive_pooled_ESM_logistic,auroc,0.5318640644983051,,6,deterministic,0.5
+symmetric_frozen_esm2_pair_mlp,auprc,0.6899174788424901,0.003114898323877299,3,model,0.5
+tuna_corrected,auprc,0.7157403012854294,0.0018441841534255876,3,model,0.5
+dscript_esm2,auprc,0.5921892333636757,0.0566158556738906,3,model,0.5
+rapppid,auprc,0.5138457009742975,0.004227866476531502,3,model,0.5
+strictly_additive_pooled_ESM_logistic,auprc,0.5288668268660406,,6,deterministic,0.5

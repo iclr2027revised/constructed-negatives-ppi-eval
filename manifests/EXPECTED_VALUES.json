@@ -1,0 +1,312 @@
+{
+  "direction_stability": [
+    {
+      "model": "D-SCRIPT",
+      "stable_surfaces": 5
+    },
+    {
+      "model": "Frozen-ESM2 MLP",
+      "stable_surfaces": 7
+    },
+    {
+      "model": "RAPPPID",
+      "stable_surfaces": 4
+    },
+    {
+      "model": "TUnA",
+      "stable_surfaces": 8
+    }
+  ],
+  "external_auroc_ranges": [
+    {
+      "cohort": "E003_corrected_replay",
+      "max": 0.5249,
+      "min": 0.5051,
+      "source": "intact"
+    },
+    {
+      "cohort": "E003_corrected_replay",
+      "max": 0.5606,
+      "min": 0.5066,
+      "source": "vidal"
+    },
+    {
+      "cohort": "E005_primary",
+      "max": 0.5179,
+      "min": 0.4825,
+      "source": "intact"
+    },
+    {
+      "cohort": "E005_primary",
+      "max": 0.5134,
+      "min": 0.4292,
+      "source": "vidal"
+    }
+  ],
+  "fully_random_deltas": [
+    {
+      "model": "D-SCRIPT",
+      "surface": "bernett2026_ilp_exact",
+      "value": -0.0767
+    },
+    {
+      "model": "D-SCRIPT",
+      "surface": "tppni2025_scm_cl3_exact_balanced",
+      "value": -0.1808
+    },
+    {
+      "model": "D-SCRIPT",
+      "surface": "vidal__measured",
+      "value": -0.0547
+    },
+    {
+      "model": "Frozen-ESM2 MLP",
+      "surface": "bernett2026_ilp_exact",
+      "value": -0.0251
+    },
+    {
+      "model": "Frozen-ESM2 MLP",
+      "surface": "tppni2025_scm_cl3_exact_balanced",
+      "value": 0.0228
+    },
+    {
+      "model": "Frozen-ESM2 MLP",
+      "surface": "vidal__measured",
+      "value": 0.0836
+    },
+    {
+      "model": "RAPPPID",
+      "surface": "bernett2026_ilp_exact",
+      "value": -0.0018
+    },
+    {
+      "model": "RAPPPID",
+      "surface": "tppni2025_scm_cl3_exact_balanced",
+      "value": 0.0381
+    },
+    {
+      "model": "RAPPPID",
+      "surface": "vidal__measured",
+      "value": -0.0741
+    },
+    {
+      "model": "TUnA",
+      "surface": "bernett2026_ilp_exact",
+      "value": -0.03
+    },
+    {
+      "model": "TUnA",
+      "surface": "tppni2025_scm_cl3_exact_balanced",
+      "value": 0.0193
+    },
+    {
+      "model": "TUnA",
+      "surface": "vidal__measured",
+      "value": 0.0449
+    }
+  ],
+  "note": "Derived from the released metric-level tables at build time. reproduce.py recomputes each value and compares it here.",
+  "schema_version": 1,
+  "shortcut_deltas": [
+    {
+      "control": "length_composition",
+      "surface": "bernett2026_ilp_exact",
+      "value": -0.0109
+    },
+    {
+      "control": "length_composition",
+      "surface": "degree_partner_matched",
+      "value": -0.0169
+    },
+    {
+      "control": "length_composition",
+      "surface": "esm_partner_matched",
+      "value": -0.0002
+    },
+    {
+      "control": "length_composition",
+      "surface": "intact__measured",
+      "value": -0.0071
+    },
+    {
+      "control": "length_composition",
+      "surface": "sequence_nuisance_matched",
+      "value": 0.0073
+    },
+    {
+      "control": "length_composition",
+      "surface": "tppni2025_scm_cl3_exact_balanced",
+      "value": -0.0077
+    },
+    {
+      "control": "length_composition",
+      "surface": "uniform_partner",
+      "value": -0.0166
+    },
+    {
+      "control": "length_composition",
+      "surface": "vidal__measured",
+      "value": 0.0261
+    }
+  ],
+  "sign_agreement": [
+    {
+      "control": "length_composition",
+      "matches": 11,
+      "metric": "auprc",
+      "surface": "bernett2026_ilp_exact"
+    },
+    {
+      "control": "length_composition",
+      "matches": 11,
+      "metric": "auroc",
+      "surface": "bernett2026_ilp_exact"
+    },
+    {
+      "control": "length_composition",
+      "matches": 10,
+      "metric": "auprc",
+      "surface": "degree_partner_matched"
+    },
+    {
+      "control": "length_composition",
+      "matches": 11,
+      "metric": "auroc",
+      "surface": "degree_partner_matched"
+    },
+    {
+      "control": "length_composition",
+      "matches": 7,
+      "metric": "auprc",
+      "surface": "esm_partner_matched"
+    },
+    {
+      "control": "length_composition",
+      "matches": 10,
+      "metric": "auroc",
+      "surface": "esm_partner_matched"
+    },
+    {
+      "control": "length_composition",
+      "matches": 8,
+      "metric": "auprc",
+      "surface": "intact__measured"
+    },
+    {
+      "control": "length_composition",
+      "matches": 8,
+      "metric": "auroc",
+      "surface": "intact__measured"
+    },
+    {
+      "control": "length_composition",
+      "matches": 3,
+      "metric": "auprc",
+      "surface": "sequence_nuisance_matched"
+    },
+    {
+      "control": "length_composition",
+      "matches": 2,
+      "metric": "auroc",
+      "surface": "sequence_nuisance_matched"
+    },
+    {
+      "control": "length_composition",
+      "matches": 4,
+      "metric": "auprc",
+      "surface": "tppni2025_scm_cl3_exact_balanced"
+    },
+    {
+      "control": "length_composition",
+      "matches": 3,
+      "metric": "auroc",
+      "surface": "tppni2025_scm_cl3_exact_balanced"
+    },
+    {
+      "control": "length_composition",
+      "matches": 10,
+      "metric": "auprc",
+      "surface": "uniform_partner"
+    },
+    {
+      "control": "length_composition",
+      "matches": 12,
+      "metric": "auroc",
+      "surface": "uniform_partner"
+    },
+    {
+      "control": "length_composition",
+      "matches": 8,
+      "metric": "auprc",
+      "surface": "vidal__measured"
+    },
+    {
+      "control": "length_composition",
+      "matches": 8,
+      "metric": "auroc",
+      "surface": "vidal__measured"
+    }
+  ],
+  "vidal_intervals": [
+    {
+      "cluster_crosses_zero": false,
+      "model": "D-SCRIPT",
+      "seed": 11
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "D-SCRIPT",
+      "seed": 22
+    },
+    {
+      "cluster_crosses_zero": true,
+      "model": "D-SCRIPT",
+      "seed": 33
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "Frozen-ESM2 MLP",
+      "seed": 11
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "Frozen-ESM2 MLP",
+      "seed": 22
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "Frozen-ESM2 MLP",
+      "seed": 33
+    },
+    {
+      "cluster_crosses_zero": true,
+      "model": "RAPPPID",
+      "seed": 11
+    },
+    {
+      "cluster_crosses_zero": true,
+      "model": "RAPPPID",
+      "seed": 22
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "RAPPPID",
+      "seed": 33
+    },
+    {
+      "cluster_crosses_zero": true,
+      "model": "TUnA",
+      "seed": 11
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "TUnA",
+      "seed": 22
+    },
+    {
+      "cluster_crosses_zero": false,
+      "model": "TUnA",
+      "seed": 33
+    }
+  ]
+}

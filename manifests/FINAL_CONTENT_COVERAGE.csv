@@ -1,0 +1,964 @@
+kind,claim_id,claim,reviewer_file,reproducibility_level,verification
+figure,fig:design,Main Figure 1,figures/R2/figure_design.pdf;docs/PROCEDURES.md,SCHEMATIC,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:factorial,Main Figure 2,figures/R2/fig02_original_submitted.pdf;results/additional/figure_data__fig02_factorial_delta_auprc.csv,ORIGINAL_512_TABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:pairdependence,Main Figure 3,figures/R2/fig03_corrected_shuffling.pdf;results/additional/SHUFFLE_UNIFORM_ALL_SEED_ROWS.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:measured-transfer,Main Figure 4,figures/R2/fig04_absolute_measured.pdf;results/additional/EXTERNAL_ALL_SEED_METRICS.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:replication,Main Figure 5,figures/R2/figure_replication.pdf;results/additional/MATCHED_ALL_144_INTERVALS.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:baseline-comparison,Main Figure 6,figures/R2/fig06_pooled_esm_baselines.pdf;results/additional/diagonal_comparison.csv;results/additional/pooled_esm_summary.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-absolute-auprc,Appendix Figure 1,figures/R2/figS01_absolute_auprc.pdf;results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,ORIGINAL_512_TABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-model-order,Appendix Figure 2,figures/R2/figS13_model_order.pdf;results/metric_level/e003_core_metric_summary.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-shortcut-controls,Appendix Figure 3,figures/R2/figS03_shortcut_controls.pdf;results/metric_level/e005_shortcut_metrics.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-partner-shuffling-absolute,Appendix Figure 4,figures/R2/figS04_corrected_shuffle_absolute.pdf;results/metric_level/e005_shuffle_metrics.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-external-transfer,Appendix Figure 5,figures/R2/figS02_external_transfer.pdf;results/metric_level/e003_external_metric_summary.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-datasail,Appendix Figure 6,figures/R2/figS14_datasail.pdf;results/metric_level/e005_datasail_metrics.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:construction-characterization,Appendix Figure 7,figures/R2/figS04_negative_overlap.pdf;data/manifests/panel_manifest_all44.json,FROZEN_ARTWORK_SOURCE_LAYOUT_UNAVAILABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:construction-geometry,Appendix Figure 8,figures/R2/figS05_negative_geometry.pdf;results/metric_level/negative_distribution_contrast.csv,FROZEN_ARTWORK_PARTIAL_SUPPORT,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-partition-overlap,Appendix Figure 9,figures/R2/figS06_partition_overlap.pdf;data/manifests/panel_manifest_all44.json,FROZEN_ARTWORK_SOURCE_LAYOUT_UNAVAILABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-external-overlap,Appendix Figure 10,figures/R2/figS10_original_external_overlap.pdf;data/mappings/vidal_orf_crosswalk.csv,FROZEN_ARTWORK_PARTIAL_SUPPORT,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-balanced-accuracy,Appendix Figure 11,figures/R2/figS08_balanced_accuracy.pdf;results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,ORIGINAL_512_TABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-mcc,Appendix Figure 12,figures/R2/figS09_mcc.pdf;results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,ORIGINAL_512_TABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-f1,Appendix Figure 13,figures/R2/figS10_f1.pdf;results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,ORIGINAL_512_TABLE,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-512-cohort,Appendix Figure 14,figures/R2/figS11_512_cohort.pdf;results/metric_level/e005_retention.csv,FROZEN_ARTWORK_PARTIAL_SUPPORT,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+figure,fig:supp-full-matrices,Appendix Figure 15,figures/R2/figure_full_matrices.pdf;results/additional/PRIMARY_1024_ALL_GOLD_METRICS.csv;results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,METRIC_TABLE_ONLY,scripts/verify_final.py; artwork identity; scientific support level explicitly limited
+table,tab:datasets,Current manuscript table datasets,docs/DATASETS.md,TABLE_OR_PROTOCOL_EVIDENCE,Saved-source comparison; no new inference
+table,tab:model-details,Current manuscript table model-details,configs/README.md,TABLE_OR_PROTOCOL_EVIDENCE,Saved-source comparison; no new inference
+table,tab:collisions,Current manuscript table collisions,results/additional/COLLISIONS_1024_TRAIN.csv,TABLE_OR_PROTOCOL_EVIDENCE,Saved-source comparison; no new inference
+table,tab:vidal-strata,Current manuscript table vidal-strata,results/additional/VIDAL_FINAL_IDENTITY_COUNTS.csv,TABLE_OR_PROTOCOL_EVIDENCE,Saved-source comparison; no new inference
+table,tab:vidal-auroc,Current manuscript table vidal-auroc,results/additional/VIDAL_ALL_STRATA_SEEDS.csv,TABLE_OR_PROTOCOL_EVIDENCE,Saved-source comparison; no new inference
+table,tab:fully-random,Current manuscript table fully-random,results/additional/FULLY_RANDOM_ALL_32_MEANS.csv,TABLE_OR_PROTOCOL_EVIDENCE,Saved-source comparison; no new inference
+reviewer_claim,coverage-1,E005 Gold 6x6 AUPRC/AUROC matrices,results/pointwise/E005_core/**;results/pointwise/E005_primary/**,1_pointwise,python reproduce.py --all; 
+reviewer_claim,coverage-2,E003 corrected-replay Gold cells (all four executed models),results/pointwise/E003_corrected_replay/**,1_pointwise,python reproduce.py --all; Corrected replay only; it is not a byte-for-byte rerun of original inference
+reviewer_claim,coverage-3,E003 and E005 validation-threshold MCC/F1/balanced accuracy (864 cells),results/tables/reported_mcc.csv;results/tables/validation_selected_thresholds_144_units.csv;results/validation_pointwise/E005_core/**,1_pointwise,python reproduce.py --all; All 144 thresholds and 72 E005_core validation predictions included; historical E003 per-row validation predictions never saved
+reviewer_claim,coverage-4,Fully Random minus Uniform AUROC/AUPRC,manifests/FULLY_RANDOM_PREDICTIONS.csv;manifests/FULLY_RANDOM_EXTERNAL_PREDICTIONS.csv;results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,1_pointwise,python scripts/verify_additional.py --scores; All 72 Gold and 24 external Fully Random score cells supplied and verified (96/96)
+reviewer_claim,coverage-5,Per-seed paired and cluster intervals,results/metric_level/statistical_per_seed_intervals.csv,1_metric,"python reproduce.py --all; Intervals are recomputed from stored bounds, not resampled"
+reviewer_claim,coverage-6,Symmetric endpoint-control deltas,results/metric_level/shortcut_delta_symmetric.csv,1_metric,python reproduce.py --all; Control fits are not re-executed; deltas are read and checked
+reviewer_claim,coverage-7,Sign agreement between controls and neural shifts,results/metric_level/sign_agreement_by_environment.csv,1_metric,python reproduce.py --all; 
+reviewer_claim,coverage-8,Vidal/Y2H and IntAct absolute AUROC ranges,results/external_pointwise/**;results/metric_level/e00*_external_metric*.csv,1_pointwise,"python scripts/verify_additional.py --scores; All 1,152 external prediction cells (576 E003 + 576 E005) supplied and verified"
+reviewer_claim,coverage-9,Partner-shuffling original-minus-shuffled AUROC,results/shuffle_pointwise/E003_corrected_512_shuffle/**;results/pointwise/E005_core/**;results/pointwise/E005_primary/**;results/metric_level/corrected_shuffle_deltas.csv,1_pointwise,python scripts/verify_additional.py --scores; All 432 E003 corrected 512 shuffled + 432 E005 unshuffled + 432 E005 shuffled cells supplied
+reviewer_claim,coverage-10,DataSAIL leakage-reduced split sensitivity,results/metric_level/e005_datasail_metrics.csv,1_metric,python reproduce.py --all; 
+reviewer_claim,coverage-11,Split definitions for all 44 train/validation/test panels,data/manifests/panel_manifest_all44.json,3_training,python reproduce.py --verify; All 44 actual lists supplied; historical source registries omitted.
+reviewer_claim,coverage-12,"Collision, HuRI mapping, homology, endpoint distribution, and additive baseline audit tables",results/metric_level/known_positive_collision_audit.csv;results/metric_level/huri_collision_audit.csv;results/metric_level/huri_mapping_coverage.csv;results/metric_level/homology_sample_scores.csv;results/metric_level/endpoint_frequency_audit.csv;results/additional/diagonal_comparison.csv,1_metric,python reproduce.py --all; Aggregate tables only; source database rows are absent.
+reviewer_claim,coverage-13,Model inference on the four executed architectures,manifests/CHECKPOINT_INVENTORY.csv,2_inference,not possible; 114 checkpoint binaries deliberately excluded; historical adapters unavailable.
+reviewer_claim,coverage-14,Training reproduction,configs/*.yaml,3_training,"not possible; Configs shipped; weights, ESM2 backbone and raw dumps withheld"
+quantitative_source_block,paper-block-006,"\begin{abstract}
+Many machine-learning tasks, including representation learning, rely on
+negative examples that are constructed rather than directly observed. This
+issue is especially important for protein--protein interaction (PPI)
+prediction, where experimentally established non-interactions are scarce. PPI models are therefore commonly trained and evaluated against sampled, unobserved protein pairs
+treated as negatives. We study how this construction affects model
+comparison. Keeping positives, protein-disjoint splits, class balance, and
+model selection fixed, we vary training and evaluation negatives
+independently across six constructions and four sequence-based models, three
+of which use protein language model (pLM) representations. Changing only the
+test negatives shifts AUPRC by up to 0.26, and the top-ranked architecture
+changes with the construction. Negatives matched to true partners in pLM
+representation space reduce the evaluated pLM-based models to near-chance
+performance in this constructed setting. We correct an identifier-lookup error
+that invalidated the submitted partner-shuffling conclusion; the corrected
+results show dependence on original pairs in some settings. Absolute AUROC on
+measured assay outcomes is often close to chance. A new 1024-residue experiment
+retains more training positives and confirms sensitivity to negative construction,
+although individual model results vary. A fully random-pair training control
+also shows architecture-dependent effects. We document the evaluation pipeline
+and distinguish verified private results from artifacts not yet approved for release. Our results
+show that with constructed negatives, model comparisons are not just noisy
+but systematically sensitive to how negatives are defined, a methodological
+choice that is often left implicit.
+\end{abstract}",results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-011,"We address this problem with [this benchmark], a controlled evaluation of
+sequence-based PPI models on the human Gold benchmark introduced by
+\citet{bernett2024}. We hold fixed its positive interactions and
+protein-disjoint split, class balance, common 512-residue sequence subset,
+model-selection procedure, and random seeds. We evaluate four complementary
+sequence-based models: a controlled frozen-pLM pair multi-layer perceptron
+(MLP) baseline based on ESM-2 \cite{lin2023esm2}, TUnA \citep{ko2024}, RAPPPID
+\citep{szymborski2022}, and D-SCRIPT-ESM2 \citep{reim2025}. For each model, the
+six training-negative constructions are crossed with the same six test-negative
+constructions, giving a $6\times6$ matrix per model and seed. This separates the
+effect of training negatives from the effect of test negatives. The six constructions range from uniform random pairing to degree matching,
+anchor-based matching of the replaced partner in sequence-feature or ESM-2
+space, a global bias-reducing ILP \citep{bernett2026}, and topology-driven
+sampling \citep{chatterjee2025}.",results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-012,"We perform \emph{cross-source} evaluations, applying the same Gold-trained models,
+without retraining or threshold adaptation, on independent data sources.
+Protein isoform-specific yeast two-hybrid (Y2H-iso) assay outcomes
+\citep{lambourne2025} and explicit curated IntAct negatives
+\citep{orchard2014} are kept distinct from BioGRID \citep{oughtred2021} and
+STRING \citep{szklarczyk2025} evaluations that pair source-specific positives
+with constructed negatives. Simple property-based controls, protein-only
+controls, and within-class partner shuffling test whether discrimination
+requires the specific protein pair. The benchmark therefore evaluates whether conclusions about a model remain
+consistent across negative constructions, partner-shuffling controls, and
+evaluation sources. Our goal is not to identify a universally preferable
+negative sampler, but to determine which conclusions about sequence-based PPI
+models, including comparisons between pLM-based and raw-sequence architectures,
+remain consistent when the negative class and evaluation source change.",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-013,"Our main findings are as follows. (i) Performance and model rankings depend on both training and test negative
+construction. Anchor-based negatives matched in ESM-2 space are challenging
+for the evaluated ESM2-based models, but this is a representation-coupled stress
+test rather than evidence of true biological non-interaction; topology-driven
+negatives can be easier. (ii) No construction removes all simple predictive
+signals. Correcting an identifier-lookup error in our submitted partner-shuffling
+analysis reveals dependence on the original pairing in some settings; it does
+not establish physical binding recognition. (iii) Constructed training negatives
+often underperform Uniform training on the selected external sources, yet
+absolute discrimination on assay outcomes is itself frequently near chance.
+Neither result makes Uniform universally best. (iv) A separate 1024-residue
+experiment preserves sensitivity to negative construction, and a fully random-pair
+control produces model-dependent outcomes. RAPPPID remains near chance in many
+settings, but architecture and pretraining differ.",results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-016,"\paragraph{Sequence-based PPI models.}
+Recent sequence-based PPI predictors use either trainable sequence encoders or
+representations from pretrained pLMs. TUnA uses ESM-2 residue representations with intra-protein and inter-protein
+Transformer encoders and an SNGP output layer \citep{ko2024,lin2023esm2};
+RAPPPID uses SentencePiece tokenization and twin bidirectional AWD-LSTM encoders
+\citep{szymborski2022}; and D-SCRIPT-ESM2 denotes the ESM-2-based
+reimplementation evaluated by \citet{reim2025}, derived from the original
+D-SCRIPT architecture \citep{sledzieski2021}. We also include a controlled
+Frozen-ESM2 pair MLP baseline that symmetrically combines fixed ESM-2 (150M)
+single-protein representations. These models span pooled-pLM, residue-level
+interaction, Transformer/SNGP, and raw-sequence recurrent architectures while
+remaining feasible to retrain across the full factorial. Contemporary context
+includes C3PI, a sequence-based classifier evaluated on Gold
+\citep{hosseini2025c3pi}, large-scale coevolution/structure-based human
+interactome prediction \citep{zhang2025humanppi}, and the graph-level PRING
+benchmark at NeurIPS 2025 \citep{zheng2025pring}. Earlier pilot results had been inspected before the final evaluation protocol;
+we therefore do not claim model selection was independent of all prior tests.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-017,"\paragraph{Dataset shortcuts.}
+Distribution shift and leakage remain central issues in protein ML. FLIP2
+explicitly evaluates protein models under application-relevant distribution
+shifts \citep{didi2026flip2}; PRING introduces redundancy- and
+leakage-controlled PPI network evaluation \citep{zheng2025pring}; and
+\citet{bernett2024} showed that protein sharing, sequence similarity, and
+interacting hubs can strongly affect sequence-based PPI evaluation. DataSAIL
+provides a general similarity-aware splitting framework
+\citep{joeres2025,joeres2026addendum}. Pretrained representations create a
+separate exposure issue because downstream benchmark proteins or close relatives
+may occur in the pretraining corpus \citep{szymborski2026}. Taxonomic identity
+can also be recoverable from protein representations \citep{hallee2026}; our
+main Gold experiment is human-only, so we do not interpret taxonomy as a
+Gold-specific shortcut.",results/metric_level/e005_datasail_metrics.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-019,"Our contributions are fourfold: 
+\begin{itemize}
+\item a controlled training-negative
+$\times$ test-negative evaluation of four sequence-based PPI models across six
+constructions
+\item direct controls for pair-specific learning, including
+property-based baselines, protein-only prediction, and partner-shuffled
+evaluation
+\item evaluation of the same Gold-trained models on Y2H-iso assay
+outcomes and an IntAct set with curated negatives, cross-source BioGRID/STRING data, and a separate
+leakage-reduced DataSAIL split
+\item a reusable evaluation pipeline that
+allows new PPI architectures to be tested under the same constructions,
+controls, and evaluation rules.
+\end{itemize}",results/additional/SHUFFLE_UNIFORM_ALL_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-021,"\subsection{Gold benchmark and external evaluation sources.}
+Our controlled experiment starts from the human Gold benchmark introduced by
+\citet{bernett2024} and subsequently used by \citet{reim2025}. In the published
+Gold split, proteins are assigned to disjoint train (Intra1), validation
+(Intra0), and test (Intra2) partitions, so a protein appearing in one partition
+does not reappear in another. The source split contains 81,596 training,
+29,630 validation, and 26,024 test positive pairs, with degree-balanced
+constructed negatives in the original release
+\citep{bernett2024,joeres2026addendum}.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-022,"To evaluate all four models on identical raw sequences, we apply a predefined
+maximum of 512 amino-acid residues per protein before constructing candidate
+sets or negatives. This is the minimum native input limit of the fixed model
+implementations, not a threshold selected from test performance or desired sample
+size. The common subset retains 13,304 training, 11,085 validation, and 10,111
+test positive pairs, corresponding to 16.3\
+positives. All original Gold claims therefore apply to this sequence-compatible
+subset. In a separate 1024-residue experiment we retain 49,164/81,596 training
+positives (60.25\
+This experiment also changes which proteins and negative candidates are eligible;
+it does not isolate sequence length as the cause of any performance difference.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-024,"For external evaluation, we use a fixed sequence-compatible Y2H-iso subset with
+846 detected interactions and 3,185 assay non-detections
+\citep{lambourne2025}, and an IntAct set with 10,111 positive records and 236
+explicit curated negatives \citep{orchard2014}. Y2H-iso non-detections are assay
+outcomes and may include interactions missed because of assay sensitivity or
+other technical limitations. BioGRID \citep{oughtred2021} and STRING
+\citep{szklarczyk2025} provide independent sources of positive interactions;
+their evaluations pair 10,111 source-specific positives with constructed
+negatives. Appendix Table~\ref{tab:datasets} lists the evaluated sets and keeps
+assay non-detections, curated negatives, and constructed unobserved pairs
+explicitly separate. The additional 1024-residue Y2H-iso subset contains 2,503
+detected interactions and 5,639 assay non-detections (positive fraction 0.3074);
+the corresponding IntAct subset contains 20,818 positives and 480 curated
+negatives. The Y2H-iso data come from a selected screen of transcription-factor
+isoforms and partners, not a random sample of human protein pairs.",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-025,"These external sources are not assumed to be protein- or family-disjoint from
+Gold. Protein identities, homologous sequences, or previously observed pairs
+can therefore overlap across sources. The source-overlap analysis identifies, for example, 109 exact Y2H-iso sequences and four exact Y2H-iso sequence pairs
+overlapping Gold train; for STRING, raw-sequence matching finds 3,550 exact
+sequences and 33,571 exact sequence pairs overlapping Gold train. These counts describe overlap in the source pools; they do not imply that every
+evaluated protein pair overlaps Gold training data. We therefore use these datasets to test cross-source
+transfer without adaptation, not to claim strict OOD generalization. Appendix
+Figure~\ref{fig:supp-external-overlap} reports the corresponding source-pool
+overlap analysis. The 1024-residue Vidal evaluation is also stratified by exact
+sequence and resolved protein overlap with frozen Gold training and validation;
+these are not strict family-disjoint tests (Appendix Table~\ref{tab:vidal-strata}).",results/metric_level/homology_sample_scores.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-026,"\subsection{PPI prediction models.}
+We evaluate four sequence-only architectures under a common factorial
+protocol. Earlier pilot results had already been inspected before this
+final evaluation, so we do not claim the model choice was fully independent
+of past test results. Inclusion required a scalar pair score, training and inference behavior that
+could be validated, and no unavoidable PPI-specific pair pretraining
+under a fixed negative construction that would confound the controlled
+intervention. \textbf{Frozen-ESM2} uses fixed single-protein ESM-2 (150M)
+representations \citep{lin2023esm2} and a symmetric pair MLP; the ESM-2 encoder is
+pretrained on protein sequences, but the interaction head is trained from
+scratch for each Gold training construction. \textbf{TUnA} uses ESM-2 per-token
+representations, intra-protein and inter-protein Transformer encoders, and an
+SNGP output layer \citep{ko2024}. \textbf{D-SCRIPT-ESM2} follows the D-SCRIPT contact-map architecture
+using an adapted frozen ESM2-150M residue representation pipeline
+\citep{reim2025,sledzieski2021}, not the 650M backbone mistakenly
+described in the submitted manuscript. \textbf{RAPPPID} is a raw-sequence twin AWD-LSTM model
+with SentencePiece tokenization and no pretrained pLM
+\citep{szymborski2022}. Architecture and training specifications for the executed adaptations are
+summarized in Appendix Table~\ref{tab:model-details}; the exact historical
+D-SCRIPT/TUnA adapter sources are not redistributed in the private candidate.
+SENSE-PPI was excluded because the faithful ESM2-3B representation cache was
+incomplete and the full controlled comparison was too costly; its performance
+is not inferred.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-028,"\paragraph{Uniform.} A replacement partner is sampled uniformly from the
+stage-specific candidate set. Uniform sampling does not match
+per-protein properties between classes and therefore leaves protein-level
+shortcuts available.
+\paragraph{Degree-matched.} The replacement partner minimizes the absolute
+difference from the train-visible network degree of the observed positive
+partner. On the protein-disjoint Gold test set, train-visible degree is
+degenerate because test proteins are absent from the training network, so this
+test construction is retained as a diagnostic condition.
+\paragraph{Sequence-matched.} Each protein is represented by
+$\log(1+\mathrm{length})$ and the frequencies of the 20 standard amino acids,
+standardized within the split; the allowed replacement partner minimizing
+Euclidean distance to the observed partner is selected.
+\paragraph{ESM-matched.} The same fixed-anchor rule is applied in cached
+single-protein ESM-2 (150M) representation space, using final-layer
+overlap-corrected mean-pooled 640-dimensional vectors
+\citep{lin2023esm2}. The representation cache is fixed before PPI training.
+Because three evaluated architectures share the ESM2 encoder family, this
+negative construction is a representation-coupled stress test, not a set of
+verified non-interactions. In the 1024-residue test it yields 996 repeated
+negative rows versus 129 for Uniform and uses its most common replacement
+protein 172 times versus 22.
+\paragraph{Bernett-ILP.} We implement the global ILP negative construction of
+\citet{bernett2026} on the fixed candidate-pair set, with equal weights on
+degree, taxon-pair counts, self-interactions, and mean Gene Ontology Biological
+Process Jaccard discrepancy.
+\paragraph{TPPNI-balanced.} We reproduce the degree-constrained
+configuration-model and Contrastive-L3 candidate generation of
+\citet{chatterjee2025}, then take a predefined deterministic 1:1 subset.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-029,"\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=0.78\textwidth]{figure_design.pdf}
+  \caption{\textbf{Negative-pair construction, Gold factorial, and evaluation
+  evidence.} Observed Gold positives are kept fixed while the partner used to
+  construct a negative pair changes under six protocols. Uniform, Degree,
+  Sequence and ESM replace one partner; Bernett-ILP and TPPNI select pairs
+  globally. The
+  Gold experiment crosses six training-negative constructions, six test-negative
+  constructions, four models, and three seeds, giving 432 evaluations.
+  Cross-source evaluation keeps Y2H-iso assay non-detections, explicit
+  IntAct curated negatives, and constructed BioGRID/STRING unobserved pairs
+  distinct. Exact dataset counts are in Appendix Table~\ref{tab:datasets}.}
+  \label{fig:design}
+\end{figure*}",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-030,"The six Gold test negative sets share nearly the same proteins (pairwise
+protein-set Jaccard 0.94--1.00) but few exact pairs (maximum off-diagonal
+Jaccard 0.048, Sequence-matched versus ESM-matched). Since each construction selects
+10,111 pairs from a much larger candidate pool, low pair overlap does not by
+itself imply different distributions. As a descriptive measure of pair
+geometry (not of biological realism), the mean cosine similarity between the
+two ESM-2 representations in a pair is 0.908 for positives and 0.885--0.912
+across negative sets, from TPPNI-balanced to ESM-matched. Full overlap statistics,
+similarity distributions, and per-partition overlap are given in Appendix
+Figures~\ref{fig:construction-characterization},~\ref{fig:construction-geometry},
+and~\ref{fig:supp-partition-overlap}.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-031,"For BioGRID and STRING we use a predeclared reduced set of only three
+constructions, spanning the random baseline (Uniform), the global bias-aware ILP
+construction (Bernett-ILP), and the topology-driven SCM/L3 construction
+(TPPNI-balanced),
+rather than duplicating the full six-construction Gold factorial on each
+external source.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-033,"\paragraph{Training-negative by test-negative evaluation.}
+Each model is trained with each of the six Gold negative constructions using
+seeds 11, 22, and 33, giving 72 trained model instances. Every trained model is
+evaluated on all six fixed Gold test constructions, giving 432 evaluations. For
+a model trained on construction $c$, checkpoint selection uses maximum AUPRC on
+the matched Gold validation construction $c$; the classification threshold is
+selected by maximum MCC on that validation set. No test protein, test label, or
+external label is used for training, checkpoint selection, threshold selection,
+sampler fitting, or model inclusion for a given training run. Earlier
+pilot results were inspected before the original experiment, which reuses
+216 saved scoring results and adds 216 new ones. The 1024-residue replication
+contains 72 new primary fits.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-034,"All six main Gold test constructions are balanced 1:1. We report both AUPRC
+and AUROC as threshold-free classification metrics; AUPRC remains the
+pre-specified checkpoint-selection metric. The pre-specified evaluation
+protocol also records MCC, balanced accuracy, F1, Brier score, negative
+log-likelihood, and expected calibration error as secondary diagnostics;
+balanced accuracy, MCC, and F1 are shown in Appendix
+Figures~\ref{fig:supp-balanced-accuracy},~\ref{fig:supp-mcc},
+and~\ref{fig:supp-f1}.
+Threshold-dependent metrics use the validation-selected threshold and are never
+optimized on test or external labels. External evaluation sets retain their native
+class prevalence; we use AUROC for cross-source discrimination comparisons and
+interpret AUPRC within each source relative to its prevalence baseline, rather
+than comparing raw AUPRC across sources with different class prevalence.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-035,"\paragraph{Cross-source and leakage-reduced evaluation.}
+Gold-trained models are evaluated without retraining or adaptation on Y2H-iso,
+IntAct, BioGRID, and STRING. We use \emph{cross-source} only to denote a change
+of database or assay provenance; it does not imply sequence or family
+separation. Strict OOD claims are reserved for evaluations that additionally
+satisfy a declared protein- or family-separation rule. Separately, we evaluate
+D-SCRIPT-ESM2, Frozen-ESM2, and TUnA on the DataSAIL Gold-v4 sensitivity split
+\citep{joeres2026addendum}. DataSAIL reduces the reported scaled leakage score
+for Gold from 0.3642 to 0.0465, but the published Gold-v4 split also changes
+which interactions are retained. We therefore report it as a separate
+leakage-control analysis rather than a matched replacement for the main
+six-construction experiment.",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-036,"\paragraph{Controls that do not require the original protein pair.}
+The \textbf{easy-property} classifier uses predefined dataset properties such as
+protein degree, sequence length, and amino-acid composition. The
+\textbf{single-protein sequence} classifier represents one endpoint at a time by
+length and amino-acid composition and averages endpoint probabilities. The
+\textbf{simple pooled-ESM} classifier mean-pools final-layer ESM-2 residue
+embeddings and fits a low-capacity logistic classifier to $u+v$ and $|u-v|$.
+Finally, \textbf{partner-shuffled evaluation} keeps each trained PPI model fixed
+but deterministically permutes the second protein within each label class,
+preserving label counts and single-protein marginals while breaking the original
+pairs. We define
+$\Delta_{\mathrm{pair}}=\mathrm{AUROC}_{\mathrm{original}}-
+\mathrm{AUROC}_{\mathrm{shuffled}}$; positive values favor the original pairing
+and negative values favor shuffled partners.",results/additional/SHUFFLE_UNIFORM_ALL_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-037,"We report seeds 11, 22, and 33 individually. Their spread describes variation
+among three runs, not a precise estimate of training uncertainty. The matched
+512/1024 comparisons additionally resample identical test-pair rows 2,000 times;
+such intervals measure test-pair sampling sensitivity rather than retraining
+variation and do not fully account for shared-protein dependence. Available
+source configurations, checks and withheld data are documented in the private
+reproducibility candidate, whose redistribution requires author approval.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-039,"\paragraph{Performance depends on both training and test negative construction.}
+With Uniform negatives for both training and testing, AUPRC (mean $\pm$
+SD over seeds 11, 22, 33) is 0.723 $\pm$ 0.003 for TUnA,
+0.697 $\pm$ 0.005 for Frozen-ESM2, 0.587 $\pm$ 0.038 for
+D-SCRIPT-ESM2, and 0.518 $\pm$ 0.004 for RAPPPID.
+These SDs describe only three training runs and are not confidence intervals. These values are not stable when the negative construction
+changes (Fig.~\ref{fig:factorial} and Appendix Figure~\ref{fig:supp-absolute-auprc}).
+Holding the trained model fixed and changing
+only test negatives gives an average AUPRC range of 0.165 for TUnA and 0.147
+for Frozen-ESM2, with maximum ranges of 0.249 and 0.264. Holding the test set
+fixed and changing only training negatives gives average ranges of 0.138 and
+0.109, respectively. Moreover, negative construction influences model ordering. Across all 36 train-by-test settings, Frozen-ESM2 has the highest mean
+AUPRC in 20, TUnA in 15, D-SCRIPT-ESM2 in one, and RAPPPID in none. Excluding
+the degenerate degree-matched test column leaves 16, 13, one, and zero wins,
+respectively, across 30 settings. These counts are descriptive comparisons
+on related conditions, not independent statistical tests. The reversal
+analysis is kept in the supplementary material without interpreting
+resampling categories as independent replicates.
+Matching the training and test negative construction does not consistently
+improve performance (Appendix Fig.~\ref{fig:supp-model-order}).",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-040,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{fig02_original_submitted.pdf}
+  \caption{\textbf{Gold training-by-test factorial.} Four radar panels show
+  absolute mean AUPRC over seeds 11, 22, and 33. Spokes 1--6 are the Gold
+  test-negative constructions (Uniform, Degree-matched, Sequence-matched,
+  ESM-matched, Bernett-ILP, and TPPNI-balanced), and colored lines are the
+  training-negative constructions. Exact train-by-test values are given in
+  Appendix Figure~\ref{fig:supp-absolute-auprc}.}
+  \label{fig:factorial}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-042,"\paragraph{Different negative constructions leave different shortcuts
+available.}
+Reducing one shortcut does not remove all simple predictive signals. The
+original easy-property and single-protein controls remain in Appendix
+Figure~\ref{fig:supp-shortcut-controls}. A particularly informative baseline
+uses a logistic classifier on the sum and absolute difference of pooled ESM-2
+protein embeddings. On the 1024-residue Gold Uniform/Uniform setting, this
+classifier reaches AUROC 0.643 (AUPRC 0.641), compared with AUROC 0.691 for
+Frozen-ESM2, 0.723 for TUnA, 0.581 for D-SCRIPT, and 0.525 for RAPPPID
+(Fig.~\ref{fig:baseline-comparison}). The pooled logistic classifier exceeds
+D-SCRIPT and RAPPPID on all six matched training/test constructions, but not
+Frozen-ESM2 or TUnA. Because the absolute-difference feature depends on
+both proteins, it is not strictly protein-only. A separate sum-only additive
+logistic control reaches AUROC 0.570 on Uniform/Uniform. These controls expose
+predictive signal available to low-capacity models without establishing
+biological interaction recognition.",results/additional/diagonal_comparison.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-043,"\paragraph{Partner shuffling tests dependence on the original pair.}
+Within-class partner shuffling tests whether a model needs the original A--B
+pairing to retain its AUROC; $\Delta_{\mathrm{pair}}>0$ indicates that it does.
+We found an identifier-lookup error in the submitted shuffling analysis: a
+shuffled row carried the replacement partner sequence but retained a stale
+identifier for the original positive partner, which could route model input
+to the wrong protein. We corrected this mapping, checked all four input paths,
+and \emph{withdraw} the submitted finding of negligible pair dependence and the
+negative shuffling effects on ESM-matched negatives. For Uniform-trained models
+on Uniform-test negatives, corrected original-minus-shuffled AUROC is +0.134
+(Frozen-ESM2) and +0.182 (TUnA) in the 1024-residue experiment; on ESM-matched
+tests it is +0.020 and +0.026. The corrected 512-residue replay is shown
+separately because it is not an exact reconstruction of the original execution.
+These differences show pair dependence in some tested environments, but not
+physical binding-interface recognition.",results/additional/SHUFFLE_UNIFORM_ALL_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-044,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig03_corrected_shuffling.pdf}
+  \caption{\textbf{Effect of breaking the original protein pairs.}
+  Original-minus-corrected-shuffled AUROC for Uniform-trained models
+  on six Gold test-negative constructions. Individual training seeds are
+  shown with their mean. The original submitted analysis contained an
+  identifier-lookup error. The 512-residue corrected replay and new
+  1024-residue analysis are kept separate; these are not confidence intervals.}
+  \label{fig:pairdependence}
+\end{figure*}",results/additional/SHUFFLE_UNIFORM_ALL_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-045,"\paragraph{External transfer depends on training negatives and the measured source.}
+Absolute AUROC on the assay-based Y2H-iso and curated IntAct evaluations is
+often near chance. Across the six training constructions, model-averaged
+AUROC ranges are 0.507--0.561 (Y2H-iso) and 0.505--0.525 (IntAct) for the
+512-residue experiment, and 0.429--0.513 and 0.482--0.518 at 1024 residues.
+For example, Uniform-trained Frozen-ESM2 attains 0.691 AUROC on its 1024-residue
+Gold Uniform test but 0.527 on Y2H-iso. These are selected assay outcomes,
+not a protein- or family-disjoint population sample. The original 512-residue
+relative-to-Uniform external comparisons, including their few source-specific
+exceptions, are retained in Appendix~\ref{sec:relative-transfer-details}.
+The main transfer finding is the low \emph{absolute} discrimination on measured
+sources (Fig.~\ref{fig:measured-transfer}).",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-046,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.97\textwidth]{fig04_absolute_measured.pdf}
+  \caption{\textbf{Absolute measured-source AUROC.} AUROC on Vidal/Y2H
+  and IntAct for the original 512-residue and new 1024-residue experiments,
+  by training-negative construction and model. Means and descriptive spread
+  across seeds 11, 22, and 33 are shown; AUROC 0.5 is a chance reference.
+  The two sources have different negative evidence and are not strict OOD tests.}
+  \label{fig:measured-transfer}
+\end{figure*}",results/additional/VIDAL_ALL_STRATA_SEEDS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-047,"\paragraph{1024-residue replication.}
+Increasing the maximum sequence length from 512 to 1024 residues raises retained
+Gold training positives from 13,304 (16.30\
+\emph{same frozen 512-residue test pairs}, mean 1024-minus-512 AUPRC across
+36 settings per model is +0.0065 (D-SCRIPT), +0.0002 (Frozen-ESM2),
+$-0.0009$ (TUnA), and $-0.0026$ (RAPPPID), although individual differences
+can be large (e.g. $-0.1773$ for D-SCRIPT on TPPNI/TPPNI). The larger
+experiment retains negative-construction sensitivity but changes eligible
+proteins and training pairs as well as the length limit; it is not a
+length-only intervention (Fig.~\ref{fig:replication}).",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-048,"\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.96\textwidth]{figure_replication.pdf}
+  \caption{\textbf{512 versus 1024 residues.} Left: positive pairs retained
+  under each length limit. Right: 1024-minus-512 AUPRC on the same frozen
+  original test pairs, across all training/test constructions and four models.
+  The three training seeds and 144 paired test-row bootstrap intervals are
+  available in private validation tables pending approved redistribution;
+  the comparison is not length-only.}
+  \label{fig:replication}
+\end{figure}",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-049,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.88\textwidth]{fig06_pooled_esm_baselines.pdf}
+  \caption{\textbf{Strong pooled ESM-2 baselines in the 1024-residue Gold experiment.}
+  Absolute AUROC for the six matched training/test-negative constructions.
+  The sum-plus-absolute-difference logistic control uses pair-dependent features;
+  the sum-only control is strictly additive. PPI models show mean AUROC over
+  seeds 11, 22, 33, while each logistic control is a single fitted classifier
+  per training construction (not three independent seed fits). The degree-matched
+  Gold test is degenerate for train-network degree and is shown only as a diagnostic.
+  Different negative constructions do not form independent replicates.}
+  \label{fig:baseline-comparison}
+\end{figure*}",results/additional/diagonal_comparison.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-050,"\paragraph{Fully Random versus Uniform training.}
+Unlike anchor-fixed Uniform negatives $(A,C)$ made from a positive $(A,B)$,
+Fully Random samples both proteins in an unobserved pair $(X,Y)$. We completed
+12 additional fits (four architectures, three seeds) using the same positive
+pairs and six test sets; training \emph{and matched-validation} negatives
+change together. Uniform has higher mean Gold AUROC in 17 of 20 model/test
+comparisons after excluding the degenerate Degree test; the three exceptions
+are on TPPNI. Vidal/Y2H behaves differently: Fully Random improves
+Frozen-ESM2 (+0.0836 AUROC) and TUnA (+0.0449), but reduces D-SCRIPT
+($-0.0547$) and RAPPPID ($-0.0741$). These effects cannot be attributed
+uniquely to degree or training distribution because validation selection
+also changes (Appendix Table~\ref{tab:fully-random}).",results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-051,"\paragraph{DataSAIL provides a separate leakage-control analysis.}
+The published Gold-v4 split changes the retained examples and covers only
+three models and two negative constructions. It is therefore a separate
+sensitivity analysis, not a matched replacement for the main factorial
+(Appendix Fig.~\ref{fig:supp-datasail}); details and AUPRC values are given there.",results/metric_level/e005_datasail_metrics.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-054,"Negatives matched in ESM-2 space are close to chance for all three ESM2-based
+models in the original constructed benchmark, while topology-driven negatives
+are often easier. However, the ESM-matched construction uses representations
+from the encoder family shared by these models; difficult negatives are not
+necessarily biological non-interactions. The corrected partner-shuffling
+analysis, unlike the submitted analysis, shows meaningful dependence on the
+original pair in some conditions. This does not establish physical interaction
+recognition. A benchmark's difficulty should therefore be reported together
+with the space in which its negatives were matched.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-055,"In the selected 512-residue external comparisons, constructed training
+negatives rarely outperform Uniform training outside their own construction, and anchor-matched training brings little benefit
+even on its own test set; models trained on ESM-matched negatives remain
+close to chance everywhere. No single diagnostic makes a construction
+globally ``realistic'' or ``unbiased''. Conversely, the frozen-embedding MLP often ranks highest on constructed Gold
+settings; its advantage does not establish that a model identifies specific
+molecular interactions. The matched low-capacity ESM-2 controls likewise retain useful
+predictive signal (Fig.~\ref{fig:baseline-comparison}), without identifying
+a physical interaction mechanism.",results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-057,"\section{Limitations}
+The 512- and 1024-residue experiments retain only 16.3\
+Gold training positives. We test four implementations and one pLM family;
+pretraining may expose held-out proteins. Negative labels do not establish
+non-interaction (Appendix~\ref{sec:limitations-detail}).",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-059,"We have prepared a \emph{private, not yet hosted} anonymous resource
+containing all 44 frozen Gold-based split lists, 18,622 protein sequences,
+864 Gold prediction-level evaluation cells (432 corrected 512-residue replay
+and 432 primary 1024-residue cells), 72 Fully Random Gold score cells, and
+additional saved metric and audit tables. The released-code workflow can
+verify the included results, but cannot rerun the original training or
+inference: all 114 checkpoints and exact historical D-SCRIPT/TUnA adapters
+are omitted. Reviewer access will be claimed only after author approval,
+final release checks, and a verified anonymous download.",results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-065,"\appendix
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\renewcommand{\theHfigure}{suppfig.\arabic{figure}}
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theHtable}{supptab.\arabic{table}}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-067,"\begin{table*}[t]
+\centering
+\small
+\caption{\textbf{Evaluation datasets and the evidence supporting their negative
+labels.} Assay outcomes, curated negatives, and constructed unobserved
+pairs are kept separate throughout the analysis.}
+\label{tab:datasets}
+\begin{tabular}{lrrl}
+\toprule
+Dataset & Pos. & Neg. & Negative evidence \\
+\midrule
+Y2H-iso \citep{lambourne2025} & 846 & 3,185 & assay non-detection \\
+Y2H-iso (1024 residues) & 2,503 & 5,639 & assay non-detection \\
+Gold train (1024 residues) & 49,164 & 49,164 & constructed pair \\
+Gold validation (1024 residues) & 23,752 & 23,752 & constructed pair \\
+Gold test (1024 residues) & 20,818 & 20,818 & constructed pair \\
+IntAct \citep{orchard2014} & 10,111 & 236 & explicit curated negative \\
+Gold train \citep{bernett2024} & 13,304 & 13,304 & constructed pair, six constructions \\
+Gold validation \citep{bernett2024} & 11,085 & 11,085 & constructed pair, six constructions \\
+Gold test \citep{bernett2024} & 10,111 & 10,111 & constructed pair, six constructions \\
+BioGRID \citep{oughtred2021} & 10,111 & 10,111 & constructed pair, three constructions \\
+STRING \citep{szklarczyk2025} & 10,111 & 10,111 & constructed pair, three constructions \\
+\bottomrule
+\end{tabular}
+\end{table*}",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-068,"\begin{table*}[t]
+\centering
+\small
+\caption{\textbf{Core model architectures under the fixed model configurations.}
+ESM-2 (150M) has 30 layers, approximately 150M parameters, and 640-dimensional
+residue outputs; it is frozen wherever used. Parameter counts below refer only
+to the trainable PPI model.}
+\label{tab:model-details}
+\begin{tabularx}{\textwidth}{lXXr}
+\toprule
+Model & Fixed input representation & Trainable PPI architecture & Trainable params. \\
+\midrule
+Frozen-ESM2 & ESM-2 (150M) final-layer, 640-d overlap-corrected residue mean & Symmetric $[u+v,|u-v|,u\odot v]$ features; MLP 1920$\rightarrow$64$\rightarrow$32$\rightarrow$1 & 125,057 \\
+D-SCRIPT-ESM2 & ESM-2 (150M) residue representations & 640$\rightarrow$100 projection; symmetric residue-pair comparison; 200$\rightarrow$50 $1\times1$ and 50$\rightarrow$1 $7\times7$ convolutions; learned pooling & 76,706 \\
+TUnA & ESM-2 (150M) residue representations & 640$\rightarrow$64 projection; one intra- and one inter-protein Transformer layer, 8 heads, FFN width 256; SNGP head with 4,096 random Fourier features & 145,088 \\
+RAPPPID & Raw sequence; SentencePiece unigram vocabulary 250, embedding width 64 & Shared 2-layer bidirectional AWD-LSTM, 64 hidden units/direction; 128$\rightarrow$32$\rightarrow$1 Mish pair head & --- \\
+\bottomrule
+\end{tabularx}
+\end{table*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-069,"\paragraph{Frozen-ESM2.}
+The fixed encoder is ESM-2 (150M) \citep{lin2023esm2}. Residue embeddings from the
+final (30th) layer are overlap-corrected and mean-pooled to one 640-dimensional
+vector per protein. The three symmetric feature blocks are standardized on the
+training set before the MLP. The head uses ReLU activations and Adam with
+learning rate $10^{-3}$ and weight-decay/regularization coefficient $10^{-4}$
+for at most 20 epochs; the epoch with maximum matched-validation AUPRC is kept.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-070,"\paragraph{D-SCRIPT-ESM2.}
+The implementation follows the D-SCRIPT contact-map architecture
+\citep{sledzieski2021,reim2025} with frozen ESM-2 (150M) residue representations.
+Each residue is projected from 640 to 100 dimensions with ReLU and dropout 0.5.
+For every residue pair, absolute difference and element-wise product are
+concatenated, followed by a 200$\rightarrow$50 $1\times1$ convolution, batch
+normalization, a 50$\rightarrow$1 $7\times7$ contact convolution, and the
+D-SCRIPT pooling parameters. The downstream model has 76,706 trainable
+parameters and is optimized for 10 epochs with Adam at $10^{-3}$ using binary
+cross-entropy; checkpoint selection uses matched-validation AUPRC.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-071,"\paragraph{TUnA.}
+We use the fixed TUnA configuration \citep{ko2024}: a 640$\rightarrow$64
+projection, one intra-protein and one inter-protein Transformer layer, eight
+attention heads, feed-forward width 256, dropout 0.2, Swish activation, and an
+SNGP output layer with 4,096 random Fourier features. This gives 145,088
+trainable downstream parameters with the ESM-2 encoder frozen. Training uses
+Adam+Lookahead with learning rate $10^{-4}$, weight decay
+$10^{-5}$, batch size 16, and 14 epochs; the retained checkpoint maximizes
+matched-validation AUPRC. Pair scoring follows the fixed swap-invariant inference rule used in this
+evaluation.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-072,"\paragraph{RAPPPID.}
+We use the RAPPPID architecture
+\citep{szymborski2022}: a training-only SentencePiece unigram vocabulary of 250,
+64-dimensional token embeddings, a shared two-layer bidirectional AWD-LSTM with
+64 hidden units per direction, embedding dropout 0.3, recurrent weight
+DropConnect 0.3, and a symmetric Mish pair classifier with
+pair-head dropout 0.2. The submitted 74,497-parameter count corresponds to the incorrectly
+specified 32-unit configuration and is withdrawn; this implementation has no
+pretrained pLM. Training uses Ranger21 with stochastic weight averaging. Checkpoint selection
+uses matched-validation AUPRC under the common evaluation protocol; pair scores
+are made swap-invariant by the fixed inference rule used in this study.",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-074,"\section{Additional Results}
+\subsection{Further study limitations}\label{sec:limitations-detail}
+The original common 512-residue subset retains only 16.3\
+training positives (Appendix Fig.~\ref{fig:supp-512-cohort}); the new 1024-residue
+experiment retains 60.25\
+longer proteins, and the near-chance
+performance of RAPPPID may reflect this reduced training set. We test four
+models and a single pLM family, and pretrained representations may have been
+exposed to downstream proteins despite the protein-disjoint split
+\citep{szymborski2026}. None of our negative labels, whether constructed,
+assay-based, or curated, proves that two proteins cannot interact. The
+shortcut controls cover only selected properties, and partner shuffling tests
+whether the original pair is needed, not which mechanism a model uses. Three
+seeds quantify optimization variability, not biological replication.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-075,"\paragraph{Execution summary.}
+The final protocol completed all planned main evaluations: four models, six
+training-negative constructions, six test-negative constructions, and three
+seeds. External datasets were scored without retraining. The published DataSAIL
+Gold-v4 analysis is reported separately from the main Gold experiment.",results/metric_level/e005_datasail_metrics.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-076,"\subsection{Detailed relative cross-source transfer}\label{sec:relative-transfer-details}
+\paragraph{Further interpretation of constructed negatives.}
+Nearest-neighbour matching may reduce the
+diversity of the negative class, and may introduce unlabelled true
+interactions, since close homologs of a partner often share its
+interactions; in anchor-based constructions, the same anchor then appears
+with near-identical partners under opposite labels. In addition, reducing a known shortcut does not guarantee the best assay-based performance: Bernett-ILP removes
+the easy-property signal but is not best on Y2H-iso or IntAct, whereas
+TPPNI-balanced training improves Y2H-iso AUROC for two models despite an
+easily separable test construction.",results/metric_level/homology_sample_scores.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-077,"The following comparisons concern the original 512-residue experiment;
+absolute results on measured sources are presented in the main text.
+We additionally compare
+each alternative training construction with Uniform training on the same
+external evaluation set. For the three ESM2-based models in the original 512-residue experiment,
+constructed training negatives underperform Uniform training in 26 of 30
+comparisons on sources with assay-based or curated negatives (Y2H-iso,
+IntAct) and in 82 of 90 on BioGRID and STRING with constructed negatives
+(Appendix Figure~\ref{fig:supp-external-transfer}), with losses of up to 0.229
+AUROC. Training on the
+construction used to build an external set does not help either:
+TPPNI-balanced training underperforms Uniform on both TPPNI-constructed
+external sets for all three models (STRING and BioGRID, Appendix Figure~\ref{fig:supp-external-transfer}). Gains are small and specific. Degree-matched training improves transfer to
+Bernett-constructed external sets (BioGRID, STRING) for Frozen-ESM2 and TUnA (at most
+$+0.051$), consistent with the ILP matching protein degree. On
+sources with assay non-detections and curated negatives, TPPNI-balanced training slightly improves Y2H-iso
+AUROC for all three ESM2-based models (at most $+0.037$), and Bernett-ILP
+training improves IntAct AUROC for D-SCRIPT-ESM2 ($+0.028$). Some gains coincide with lower Gold
+performance, for example TPPNI-balanced training for Frozen-ESM2 (Gold AUPRC
+0.697 to 0.665, Y2H-iso AUROC 0.598 to 0.620;
+Appendix Fig.~\ref{fig:supp-external-transfer}). A construction can thus trade constructed-benchmark performance for external
+transfer, but such trade-offs are rare, and making negatives resemble
+positives helps only in a limited sense: matching protein degree costs little
+relative to Uniform and helps on external sets built with degree matching,
+whereas matching individual partners (Sequence- and ESM-matched) causes the
+largest external losses.",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-078,"\paragraph{DataSAIL leakage-control results.}
+The published DataSAIL Gold-v4 sensitivity analysis uses Uniform and
+ESM-matched negatives for both training and testing and includes three of the
+four models. Mean AUPRC across its tested conditions is 0.529 for
+D-SCRIPT-ESM2, 0.582 for Frozen-ESM2, and 0.584 for TUnA. Because this analysis
+changes both the split and sequence subset and covers only two negative
+constructions, it remains a separate sensitivity analysis rather than a
+replacement for the main factorial (Fig.~\ref{fig:supp-datasail}).",results/metric_level/e005_datasail_metrics.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-079,"\paragraph{IntAct prevalence.}
+The IntAct set contains 10,111 positives and 236 explicit negatives. Because
+positives dominate this set, its raw AUPRC is not compared with the 1:1 Gold
+AUPRC. The supplementary result tables report AUROC, AUPRC, MCC, balanced
+accuracy, and F1 for the native-prevalence evaluation set using the validation-selected
+threshold where required. We also report a fixed balanced subset as a post-hoc
+sensitivity check, kept separate from the native-prevalence result.",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-081,"\paragraph{DataSAIL.}
+The published Gold-v4 split uses its own dataset definition and
+sequence-compatibility filter. RAPPPID was not run in this analysis and is not
+imputed.",results/metric_level/e005_datasail_metrics.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-082,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.96\textwidth]{figS01_absolute_auprc.pdf}
+\caption{\textbf{Absolute Gold AUPRC across all train-by-test constructions.}
+Each row is a training-negative construction and each column is a test-negative
+construction. Values are averaged across seeds 11, 22, and 33. The original
+512-residue Gold test panels have balanced 1:1 prevalence (random AUPRC 0.5).}
+  \label{fig:supp-absolute-auprc}
+\end{figure*}",results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-083,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.72\textwidth]{figS13_model_order.pdf}
+  \caption{\textbf{Model ordering depends on the negative construction.} Panel a
+  identifies the model with the highest mean AUPRC in each of the 36 tested
+  train-by-test conditions. Panel b counts pairwise conditions in which the row
+  model has higher mean AUPRC than the column model. These counts summarize the
+  evaluated conditions and do not define a universal model ranking.}
+  \label{fig:supp-model-order}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-084,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figS03_shortcut_controls.pdf}
+  \caption{\textbf{Additional shortcut-control diagnostics.} Panel a shows
+  protein-only and easy-property controls that do not require modeling the
+  original protein pair; panel b shows the simple pooled-ESM classifier. The
+  horizontal reference line marks AUROC $=0.5$.}
+  \label{fig:supp-shortcut-controls}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-085,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.82\textwidth]{figS04_corrected_shuffle_absolute.pdf}
+  \caption{\textbf{Absolute AUROC before and after partner shuffling.} The same
+  fixed checkpoints are evaluated on the original Gold test pairs and on the
+  corrected within-label partner-shuffled sets; no model is retrained.
+The 512-residue comparison is a corrected replay and is not an exact
+reconstruction of the originally submitted inference.}
+  \label{fig:supp-partner-shuffling-absolute}
+\end{figure*}",results/additional/SHUFFLE_UNIFORM_ALL_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-086,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.82\textwidth]{figS02_external_transfer.pdf}
+  \caption{\textbf{Cross-source transfer across Gold training-negative
+  constructions.} Each cell shows $\Delta$AUROC relative to the corresponding
+  Uniform-trained model on the same external evaluation set. Y2H-iso,
+  IntAct, BioGRID, and STRING remain distinct evaluation sources and are not
+  interpreted as uniformly strict OOD tests.}
+  \label{fig:supp-external-transfer}
+\end{figure*}",results/additional/EXTERNAL_ALL_SEED_METRICS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-087,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{figS14_datasail.pdf}
+  \caption{\textbf{DataSAIL Gold-v4 sensitivity analysis.} Mean AUPRC is shown
+  for Uniform and ESM-matched training and test negative constructions for the
+  three models evaluated on the published DataSAIL split. RAPPPID was not run
+  in this analysis and is not imputed.}
+  \label{fig:supp-datasail}
+\end{figure*}",results/metric_level/e005_datasail_metrics.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-089,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{figS04_negative_overlap.pdf}
+  \caption{\textbf{Overlap among the six Gold test negative constructions.}
+  Panel a shows exact-pair Jaccard overlap and panel b shows protein-set Jaccard
+  overlap. Exact negative-pair overlap is low despite substantial reuse of the
+  same proteins.}
+  \label{fig:construction-characterization}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-090,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{figS05_negative_geometry.pdf}
+  \caption{\textbf{Representation-space characterization of the negative
+  constructions.} Panel a shows empirical distributions of within-pair ESM-2
+  cosine similarity. Panel b shows the cosine distance between the observed
+  positive partner and the selected negative partner for constructions with a
+  valid anchor-partner interpretation. These diagnostics are descriptive and
+  do not rank biological realism.}
+  \label{fig:construction-geometry}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-091,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.70\textwidth]{figS06_partition_overlap.pdf}
+  \caption{\textbf{Negative-pair overlap across dataset partitions.} Pairwise
+  exact-pair Jaccard similarity is shown separately for the training,
+  validation, and test negative constructions using a common scale.}
+  \label{fig:supp-partition-overlap}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-093,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.72\textwidth]{figS10_original_external_overlap.pdf}
+  \caption{\textbf{Overlap of external evaluation sources with Gold training
+  and validation data.} Protein-identifier, exact-sequence, and exact
+  sequence-pair overlap are separated into novel, overlapping, and unresolved
+  cases. Unresolved denotes unavailable or incomplete identifier mapping and
+  must not be interpreted as biological novelty. This historical source-pool
+  analysis is distinct from the evaluated Vidal overlap strata in Table~\ref{tab:vidal-strata}.}
+  \label{fig:supp-external-overlap}
+\end{figure*}",results/additional/VIDAL_ALL_STRATA_SEEDS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-094,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{figS08_balanced_accuracy.pdf}
+  \caption{\textbf{Balanced accuracy across the complete Gold factorial.}
+  Thresholds are selected on the matched validation construction and are not
+  re-optimized on test data.}
+  \label{fig:supp-balanced-accuracy}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-095,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{figS09_mcc.pdf}
+  \caption{\textbf{Matthews correlation coefficient across the complete Gold
+  factorial.} Thresholds are selected on the matched validation construction
+  and are not re-optimized on test data.}
+  \label{fig:supp-mcc}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-096,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{figS10_f1.pdf}
+  \caption{\textbf{F1 score across the complete Gold factorial.} Thresholds are
+  selected on the matched validation construction and are not re-optimized on
+  test data.}
+  \label{fig:supp-f1}
+\end{figure*}",docs/PROCEDURES.md,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-097,"\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.90\textwidth]{figS11_512_cohort.pdf}
+  \caption{\textbf{Effect of the common 512-residue compatibility restriction.}
+  Panel a shows the distribution of maximum partner length in the original
+  positive pairs for train, validation, and test. Panel b reports retained and
+  excluded positive pairs for each Gold split under the common requirement that
+  both protein sequences contain at most 512 residues.}
+  \label{fig:supp-512-cohort}
+\end{figure*}",results/additional/ORIGINAL_512_ALL_432_GOLD_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-099,"\paragraph{1024-residue complete factorial.}
+Figure~\ref{fig:supp-full-matrices} presents absolute AUPRC for the original
+512- and new 1024-residue studies side by side. They use different eligible
+cohorts and negative universes; the matched-test effect is in Figure~\ref{fig:replication}.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-100,"\begin{figure*}[t]
+\centering
+\includegraphics[width=.97\textwidth]{figure_full_matrices.pdf}
+\caption{\textbf{Complete Gold AUPRC matrices, 512 and 1024 residues.}
+Training constructions are rows, test constructions are columns.
+The degree-matched test column is a diagnostic, not a separate ranking test.
+The internal figure labels E003 and E005 mean the original 512-residue experiment
+and the new 1024-residue experiment, respectively.}
+\label{fig:supp-full-matrices}
+\end{figure*}",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-101,"\paragraph{Known-positive collision and homology checks.}
+Each sampler's 49,164 constructed \emph{training-negative rows} was
+compared with exact-sequence-pair positives from other databases.
+Sources overlap, so columns must not be summed.
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lrrr}\toprule
+Training construction & BioGRID & STRING & IntAct \\
+\midrule
+Uniform & 17 & 7 & 23 \\
+Degree-matched & 45 & 33 & 24 \\
+Sequence-matched & 21 & 42 & 22 \\
+ESM-matched & 39 & 125 & 29 \\
+Bernett-ILP & 69 & 151 & 27 \\
+TPPNI-balanced & 0 & 0 & 4 \\
+\bottomrule
+\end{tabular}
+\caption{Known-positive exact-sequence-pair collisions per 49,164
+1024-residue Gold training negatives; these are negative rows, not a measure
+of the unknown true false-negative rate.}
+\label{tab:collisions}
+\end{table}
+A separate HuRI comparison found zero matches within 185,737 screenable
+negative pairs (33.14\
+covered. In a fixed score-independent sample of 2,000 ESM-matched negatives
+per cohort, 166/1,988 evaluable cases at 512 residues and 164/1,986 at 1024
+met $\geq30\
+Removing those and matched positives left 1,822 balanced pairs in each
+sample. Changes in AUPRC ranged from $-0.00363$ to $+0.00523$ (512) and
+$+0.00081$ to $+0.00416$ (1024), across four Uniform-trained architectures
+and three seeds; these results do not test all ESM-matched negatives.",results/metric_level/huri_mapping_coverage.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-102,"\paragraph{Vidal/Y2H overlap with Gold.}
+The full 1024-residue Vidal/Y2H set contains 8,142 pairs.
+The following two definitions use the frozen Gold \emph{training and validation}
+reference. Neither is family-disjoint evaluation.
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lrrr}\toprule
+1024-residue Vidal overlap & Neither seen & At least one seen & Unresolved \\
+\midrule
+Exact sequence & 6,035 & 2,107 & 0 \\
+Resolved protein identity & 4,045 & 3,786 & 311 \\
+\bottomrule
+\end{tabular}
+\caption{Overlap of the evaluated Vidal/Y2H pairs with Gold training
+\emph{and validation}, using exact sequences or resolved protein identifiers.
+The train-only reference is a different analysis and must not be confused
+with these strata.}
+\label{tab:vidal-strata}
+\end{table}",results/additional/VIDAL_ALL_STRATA_SEEDS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-103,"\begin{table}[t]
+\centering\small
+\begin{tabular}{llrr}\toprule
+Model & Seed & Neither sequence seen & At least one seen \\
+\midrule
+Frozen-ESM2 & 11 & 0.4905 & 0.5221 \\
+ & 22 & 0.5444 & 0.6063 \\
+ & 33 & 0.5096 & 0.5359 \\
+TUnA & 11 & 0.5266 & 0.5725 \\
+ & 22 & 0.4886 & 0.5489 \\
+ & 33 & 0.4744 & 0.5356 \\
+D-SCRIPT & 11 & 0.6199 & 0.6465 \\
+ & 22 & 0.3999 & 0.3889 \\
+ & 33 & 0.4325 & 0.4949 \\
+RAPPPID & 11 & 0.5343 & 0.5532 \\
+ & 22 & 0.5067 & 0.5340 \\
+ & 33 & 0.5159 & 0.5343 \\
+\bottomrule
+\end{tabular}
+\caption{Vidal/Y2H AUROC by exact-sequence overlap with frozen Gold training
+and validation, for Uniform-trained models at 1024 residues.
+The same 6,035/2,107 test rows are used across seeds; intervals in the
+private source are test-row resampling intervals, not training CIs.
+Other training constructions and protein-ID results are in the private
+\texttt{VIDAL\_OVERLAP\_FINAL.csv} pending redistribution approval.}
+\label{tab:vidal-auroc}
+\end{table}",results/additional/VIDAL_ALL_STRATA_SEEDS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-104,"\paragraph{Fully Random training.}
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lrrrr}\toprule
+Evaluation & Frozen-ESM2 & TUnA & D-SCRIPT & RAPPPID \\
+\midrule
+Gold Uniform & $-0.0134$ & $-0.0324$ & $-0.1155$ & $-0.0067$ \\
+Gold Degree & $-0.0149$ & $-0.0316$ & $-0.1171$ & $-0.0051$ \\
+Gold Sequence & $-0.0042$ & $-0.0166$ & $-0.0539$ & $-0.0000$ \\
+Gold ESM & $-0.0035$ & $-0.0073$ & $-0.0179$ & $-0.0004$ \\
+Gold Bernett & $-0.0251$ & $-0.0300$ & $-0.0767$ & $-0.0018$ \\
+Gold TPPNI & $+0.0228$ & $+0.0193$ & $-0.1808$ & $+0.0381$ \\
+\midrule
+Vidal/Y2H & $+0.0836$ & $+0.0449$ & $-0.0547$ & $-0.0741$ \\
+IntAct & $+0.0145$ & $-0.0178$ & $+0.0010$ & $-0.0266$ \\
+\bottomrule
+\end{tabular}
+\caption{Mean AUROC difference (Fully Random minus Uniform training) across
+three seeds. The Gold test sets and positives are fixed, but both training
+and matched-validation negatives change. Degree is excluded from the 17/20
+non-degenerate summary. These are not independent significance tests.}
+\label{tab:fully-random}
+\end{table}
+Uniform and Fully Random also differ in protein frequency: the most common
+negative-training protein appears 401 versus 51 times, with Gini coefficient
+0.3008 versus 0.1023. These distributions change alongside length and
+composition; no unique causal explanation is identified.",results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-105,"\paragraph{Additional interpretation limits.}
+Three training seeds do not yield precise training-uncertainty estimates;
+paired bootstrap intervals from test-row resampling do not represent
+retraining uncertainty and cannot fully resolve dependence through proteins
+shared on both sides of a pair. A selected homology sample and known-positive
+collision screens do not estimate the unknown biological false-negative rate.
+The selected Y2H assay has sequence-length selection effects, and absence of
+an exact training sequence does not prove family-disjoint generalization.
+The corrected 512-residue shuffling results come from a historical replay,
+not a byte-identical repetition of the original execution.",results/metric_level/homology_sample_scores.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-106,"\paragraph{Provenance and interpretation.}
+Earlier pilot results (internal experiment records E001v3 and E002) were
+inspected before the original experiment.
+The original 512-residue factorial reused 216 earlier scoring results and added
+216 new ones; the 1024-residue experiment added 72 new fits. The executed
+D-SCRIPT used frozen ESM2-150M and RAPPPID used 64 hidden units per direction.
+SENSE-PPI was excluded because a faithful ESM2-3B representation cache was
+incomplete and a full comparison was too costly; performance was not assessed.",results/additional/MATCHED_512_1024_ALL_432_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."
+quantitative_source_block,paper-block-108,"The newly assembled private anonymous resource contains all 44 actual
+Gold-based frozen training, validation, and test panel lists, 18,622 sequence
+records, 864 main Gold prediction-level cells, and 72 additional Fully Random
+Gold score cells. It also contains per-seed results, Vidal overlap strata,
+aggregate audits, provenance and acquisition documentation, configurations,
+and reusable negative-sampling and CPU evaluation code. The separate core
+and data archives can verify saved metrics and supported figures, but not
+rerun historical training or original inference. The 114 checkpoints,
+pretrained representation caches, and exact historical D-SCRIPT/TUnA
+adapters are not distributed; external and shuffling results lack some
+per-pair predictions. The prepared resource is not yet published. Author
+approval of scientific scope and redistribution, final verification, and
+a successful unauthenticated reviewer download remain required.",results/additional/FULLY_RANDOM_ALL_96_SEED_ROWS.csv,SOURCE_POINTER_ONLY_NOT_INDEPENDENTLY_REDERIVED,"Conservative manuscript block inventory; file supports topic, not certification of every statement. See pointwise/table checks for independently verified subsets."

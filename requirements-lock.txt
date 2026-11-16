@@ -1,0 +1,11 @@
+# Tested dependency environment for the sequence-benchmark anonymous release.
+#
+# These are the exact versions the release was verified against on Python 3.11.
+# The lower bounds in pyproject.toml are the supported range; this file is the
+# pinned set that reproduce.py --all was run with.
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.17.1
+matplotlib==3.11.2
+pytest==9.1.1

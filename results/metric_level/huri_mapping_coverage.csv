@@ -1,0 +1,10 @@
+level,status,count,fraction
+HuRI genes,resolved,8080,0.9799878714372346
+HuRI genes,ambiguous,7,0.0008489993935718618
+HuRI genes,unmapped,158,0.019163129169193452
+HuRI pairs,resolved,50489,0.9696742721057079
+HuRI pairs,ambiguous,34,0.0006529922409157255
+HuRI pairs,unmapped,1545,0.029672735653376355
+Benchmark negatives,comparable,185737,0.33144712000028553
+Benchmark negatives,ambiguous endpoint,304,0.0005424870891641773
+Benchmark negatives,out of universe,374341,0.6680103929105503

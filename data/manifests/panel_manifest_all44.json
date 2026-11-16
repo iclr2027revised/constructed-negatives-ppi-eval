@@ -1,0 +1,1726 @@
+{
+  "cohort_notes": {
+    "E003_corrected_replay": "Corrected-replay E003 panels. Train, validation and test are separate frozen objects; the test panels are the 20,222-row corrected-replay panels.",
+    "E005_core": "E005 core panels at 1024 AA. These are the panels the E005 models trained and validated on. They are not the broken-pair evaluation panels.",
+    "E005_primary": "E005 broken-pair evaluation panels. Every row's right endpoint is shifted, positives included, and the shifted endpoint is recorded in broken_candidate_sequence_sha256. true_partner_sequence_sha256 keeps the original partner and is not what was scored.",
+    "RBT_fully_random": "Fully random legal-pair baseline. Distinct unordered pairs (X, Y) sampled with no anchor, which is a different construction from anchor-preserving Uniform (A, C)."
+  },
+  "note": "All 44 frozen panels are distributed. Row order, labels and endpoint sequence hashes are preserved. Private source, exclusion-registry and universe hashes are removed. Sequence registry joins reconstruct released rows; this is not a regeneration of missing historical registry inputs.",
+  "panels": [
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra1_pos": 13304,
+        "gold_intra1_pos__bernett2026_ilp_exact": 13304
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 13304,
+      "n_positive": 13304,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 13304
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 13304
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/train__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 26608,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "f7ecaab27a35db140d04d689efbf829bd4d6f1ac087612383daa0d52829e1ff9",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra1_pos": 13304,
+        "gold_intra1_pos__degree_partner_matched": 13304
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 13304,
+      "n_positive": 13304,
+      "negative_environments": {
+        "degree_partner_matched": 13304
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 13304
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/train__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 26608,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "b2a51a832c70d46339f9a2b795971ab64e75d18eb06d15990d6a4b3a92f24152",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 487,
+      "unordered_pair_duplicate_groups": 435,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra1_pos": 13304,
+        "gold_intra1_pos__esm_partner_matched": 13304
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 13304,
+      "n_positive": 13304,
+      "negative_environments": {
+        "esm_partner_matched": 13304
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 13304
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/train__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 26608,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "8c2ad0f0f98a3a07c881d6536f207c6b4f8193a354de1582cc7ac5ed5dda8226",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 564,
+      "unordered_pair_duplicate_groups": 471,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra1_pos": 13304,
+        "gold_intra1_pos__sequence_nuisance_matched": 13304
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 13304,
+      "n_positive": 13304,
+      "negative_environments": {
+        "sequence_nuisance_matched": 13304
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 13304
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/train__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 26608,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "88131626b41e711512c0cf4c195bafeb3bdfa42cb554e45a359ebb153d27c1c9",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 319,
+      "unordered_pair_duplicate_groups": 295,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra1_pos": 13304,
+        "gold_intra1_pos__tppni2025_scm_cl3_exact_balanced": 13304
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 13304,
+      "n_positive": 13304,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 13304
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 13304
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/train__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 26608,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "edd8ffc89eae8670b0bc913a2d24bae4dc24f8b30b7b7693bf7985902c7068e2",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra1_pos": 13304,
+        "gold_intra1_pos__uniform_partner": 13304
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 13304,
+      "n_positive": 13304,
+      "negative_environments": {
+        "uniform_partner": 13304
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 13304
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/train__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 26608,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "004ab56c3a356c7517b47ed71e59dd350129b17959f35783846642aca23d8508",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 102,
+      "unordered_pair_duplicate_groups": 102,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra0_pos": 11085,
+        "gold_intra0_pos__bernett2026_ilp_exact": 11085
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 11085,
+      "n_positive": 11085,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 11085
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 11085
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/validation__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 22170,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "602714386c42758ff059d00478fed0d424577604387bd572add16494fbd21566",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra0_pos": 11085,
+        "gold_intra0_pos__degree_partner_matched": 11085
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 11085,
+      "n_positive": 11085,
+      "negative_environments": {
+        "degree_partner_matched": 11085
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 11085
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/validation__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 22170,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "e3bb3b46e7c59b2caaf3e3bba7356bf11471d03102496a322fdf68a53d56307f",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 465,
+      "unordered_pair_duplicate_groups": 399,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra0_pos": 11085,
+        "gold_intra0_pos__esm_partner_matched": 11085
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 11085,
+      "n_positive": 11085,
+      "negative_environments": {
+        "esm_partner_matched": 11085
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 11085
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/validation__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 22170,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "2ff5b21945e5ebd13e2b32315971dcde3ab24be15f2ea21b3e8e44d65dfaf48b",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 482,
+      "unordered_pair_duplicate_groups": 398,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra0_pos": 11085,
+        "gold_intra0_pos__sequence_nuisance_matched": 11085
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 11085,
+      "n_positive": 11085,
+      "negative_environments": {
+        "sequence_nuisance_matched": 11085
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 11085
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/validation__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 22170,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "fb670a5c85ceef3f7770a572bb18005fe3003d4207be540d60f6eefde7c07d8c",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 229,
+      "unordered_pair_duplicate_groups": 217,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra0_pos": 11085,
+        "gold_intra0_pos__tppni2025_scm_cl3_exact_balanced": 11085
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 11085,
+      "n_positive": 11085,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 11085
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 11085
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/validation__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 22170,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "d6a1a46aafc6260366b21656de8a63aa67f2db1ce5af298df4a60cb969d4e18d",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra0_pos": 11085,
+        "gold_intra0_pos__uniform_partner": 11085
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 11085,
+      "n_positive": 11085,
+      "negative_environments": {
+        "uniform_partner": 11085
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 11085
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/validation__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 22170,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "8db9eaa3087f1137b46c697da07bab779174efaa718d3659596009cb924c9b26",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 59,
+      "unordered_pair_duplicate_groups": 58,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra2_pos": 10111,
+        "gold_intra2_pos__bernett2026_ilp_exact": 10111
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 10111,
+      "n_positive": 10111,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 10111
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 10111
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/test__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 20222,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "a2dfd431e793488d545bab846912847f09c80576ed0eb980ed6e8d19af2cc8f9",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra2_pos": 10111,
+        "gold_intra2_pos__degree_partner_matched": 10111
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 10111,
+      "n_positive": 10111,
+      "negative_environments": {
+        "degree_partner_matched": 10111
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 10111
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/test__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 20222,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "8b20a81d271eefc1850ad7eb0901135f180aa36a861be096fa3ae51eb42f6a8d",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 60,
+      "unordered_pair_duplicate_groups": 60,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra2_pos": 10111,
+        "gold_intra2_pos__esm_partner_matched": 10111
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 10111,
+      "n_positive": 10111,
+      "negative_environments": {
+        "esm_partner_matched": 10111
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 10111
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/test__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 20222,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "fef2364abbd3e2b2e3bcb18fb3769eebe1159534eabe762e236f9a76c66ab90c",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 554,
+      "unordered_pair_duplicate_groups": 470,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra2_pos": 10111,
+        "gold_intra2_pos__sequence_nuisance_matched": 10111
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 10111,
+      "n_positive": 10111,
+      "negative_environments": {
+        "sequence_nuisance_matched": 10111
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 10111
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/test__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 20222,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "2b20094e45652a94b6c9d6e3faab8d3a312fa37717015eda0c445ae06431358a",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 228,
+      "unordered_pair_duplicate_groups": 212,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra2_pos": 10111,
+        "gold_intra2_pos__tppni2025_scm_cl3_exact_balanced": 10111
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 10111,
+      "n_positive": 10111,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 10111
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 10111
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/test__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 20222,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "4925d890e3b019cb7619cab8e24ad06f5a2c471c5ca595e020aef34ce8ac54c9",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E003_corrected_replay",
+      "dataset_names": {
+        "gold_intra2_pos": 10111,
+        "gold_intra2_pos__uniform_partner": 10111
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 10111,
+      "n_positive": 10111,
+      "negative_environments": {
+        "uniform_partner": 10111
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 10111
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E003_corrected_replay/test__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 20222,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "8065f504caa9371f8c0889c00e89f34b5bea18a4c1071ff0adf9449d667f73c4",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 69,
+      "unordered_pair_duplicate_groups": 69,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra1_pos": 49164,
+        "gold_intra1_pos__bernett2026_ilp_exact": 49164
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/train__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "ec093674daef6ae5ead3a5beb95e484c06a301186e2ba8f8b99c1f68bd05a056",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra1_pos": 49164,
+        "gold_intra1_pos__degree_partner_matched": 49164
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "degree_partner_matched": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/train__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "b49538143e73b912128731879f04ddf41d349633c928f6858f6d783616bad888",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 2635,
+      "unordered_pair_duplicate_groups": 2181,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra1_pos": 49164,
+        "gold_intra1_pos__esm_partner_matched": 49164
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "esm_partner_matched": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/train__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "0752df86977be5ec5233591f7e373ba9b19a221df9a1eecba0fe771fc3f50568",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 1987,
+      "unordered_pair_duplicate_groups": 1729,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra1_pos": 49164,
+        "gold_intra1_pos__sequence_nuisance_matched": 49164
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "sequence_nuisance_matched": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/train__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "ec31adf3d450534cf048bfb61b1c69e1953d056dbbfa2a25a4ad5ae2d16a5c7a",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 1244,
+      "unordered_pair_duplicate_groups": 1138,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra1_pos": 49164,
+        "gold_intra1_pos__tppni2025_scm_cl3_exact_balanced": 49164
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/train__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "d5ee1598ef2a6758ae2894d7ff03f4fc92f4ae5634bebc607f91d7a5edadd42b",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra1_pos": 49164,
+        "gold_intra1_pos__uniform_partner": 49164
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "uniform_partner": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/train__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "4653261e3a8c1fc13c600dd1004b8a467ad820ca69d331f54411f4b617a38378",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 438,
+      "unordered_pair_duplicate_groups": 429,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra0_pos": 23752,
+        "gold_intra0_pos__bernett2026_ilp_exact": 23752
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/validation__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "4ff1955befde3dd833992851e2692f750b84510d0cfcf0bd6752608ea9fdbdee",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra0_pos": 23752,
+        "gold_intra0_pos__degree_partner_matched": 23752
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "degree_partner_matched": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/validation__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "ee91b06c8b54444eec229e057dab46dd94ff567db92458f3334c705e89f37018",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 770,
+      "unordered_pair_duplicate_groups": 694,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra0_pos": 23752,
+        "gold_intra0_pos__esm_partner_matched": 23752
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "esm_partner_matched": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/validation__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "35a8e8b97b1b15296a0a7371b78d8a8d2af35954e6eb39fc7ec5646ffdcd5187",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 853,
+      "unordered_pair_duplicate_groups": 733,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra0_pos": 23752,
+        "gold_intra0_pos__sequence_nuisance_matched": 23752
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "sequence_nuisance_matched": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/validation__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "277657ff00aec50472dd61529c0b4baeeebd6191f2fa82a331ac3449067d5409",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 454,
+      "unordered_pair_duplicate_groups": 431,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra0_pos": 23752,
+        "gold_intra0_pos__tppni2025_scm_cl3_exact_balanced": 23752
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/validation__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "04d9d0039cb78a0d9ab552e5bf202f7896802374c11744caa0f2cd9ee7bdf82f",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra0_pos": 23752,
+        "gold_intra0_pos__uniform_partner": 23752
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "uniform_partner": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/validation__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "c4e656905ffcac1088add6f5ff756695ed934bbd43f42eaae04a255ca5e05b8b",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 106,
+      "unordered_pair_duplicate_groups": 103,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__bernett2026_ilp_exact": 20818
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/test__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "f18df074eba0cafce45d0e696c6b09eef709cfae0cd1a7b3c393536817623890",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__degree_partner_matched": 20818
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "degree_partner_matched": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/test__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "c5a954cd22c78a33781a7c37f9df4d72b726c6c5629a626fd896cb22d84800fa",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 123,
+      "unordered_pair_duplicate_groups": 123,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__esm_partner_matched": 20818
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "esm_partner_matched": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/test__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "3cffef60b468b3cba6581dacdd2791573b70ca00d868407508e806ce4e0f9084",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 996,
+      "unordered_pair_duplicate_groups": 825,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__sequence_nuisance_matched": 20818
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "sequence_nuisance_matched": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/test__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "46f04484cec5e0404816adf54a5ab0ae3dad757aea41db8f559f0a9318a9bfcb",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 521,
+      "unordered_pair_duplicate_groups": 472,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__tppni2025_scm_cl3_exact_balanced": 20818
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/test__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "0903a2605b55e5509abb389ac83e93056ff0886fc066f0fcf22f084e2ff8866a",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_core",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__uniform_partner": 20818
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "uniform_partner": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/E005_core/test__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "probability_clip_1e-7",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "43d37c0b58dd88e0c8fbc2d2519a8f8bcea2067056c1182fd96ba0f4af47093a",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 129,
+      "unordered_pair_duplicate_groups": 129,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_primary",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__bernett2026_ilp_exact": 20818
+      },
+      "distributed": true,
+      "environment": "bernett2026_ilp_exact",
+      "evidence_semantics": "source_label_retained_after_endpoint_shift",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "bernett2026_ilp_exact": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Original row label remains attached after endpoint shift; mixed labels for a scored pair are retained.",
+      "path": "data/frozen_panels/E005_primary/test__bernett2026_ilp_exact.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 31,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "ad82ede35b002f60debff969e74c0c9c5d8dfcb9f269480f52c3dd87d7275338",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 2992,
+      "unordered_pair_duplicate_groups": 2464,
+      "unordered_pair_mixed_label_groups": 760
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_primary",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__degree_partner_matched": 20818
+      },
+      "distributed": true,
+      "environment": "degree_partner_matched",
+      "evidence_semantics": "source_label_retained_after_endpoint_shift",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "degree_partner_matched": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Original row label remains attached after endpoint shift; mixed labels for a scored pair are retained.",
+      "path": "data/frozen_panels/E005_primary/test__degree_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 31,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "657fdaf2d634e5faaa2038c6d4087416581dff34acd57a0fd31342da78d57dec",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 974,
+      "unordered_pair_duplicate_groups": 917,
+      "unordered_pair_mixed_label_groups": 346
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_primary",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__esm_partner_matched": 20818
+      },
+      "distributed": true,
+      "environment": "esm_partner_matched",
+      "evidence_semantics": "source_label_retained_after_endpoint_shift",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "esm_partner_matched": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Original row label remains attached after endpoint shift; mixed labels for a scored pair are retained.",
+      "path": "data/frozen_panels/E005_primary/test__esm_partner_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 32,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "eb0f103d320bfd9af5c6ec0ac785dbdb242901eb7cade36fbe51faec8b2be5d4",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 1319,
+      "unordered_pair_duplicate_groups": 1226,
+      "unordered_pair_mixed_label_groups": 389
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_primary",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__sequence_nuisance_matched": 20818
+      },
+      "distributed": true,
+      "environment": "sequence_nuisance_matched",
+      "evidence_semantics": "source_label_retained_after_endpoint_shift",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "sequence_nuisance_matched": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Original row label remains attached after endpoint shift; mixed labels for a scored pair are retained.",
+      "path": "data/frozen_panels/E005_primary/test__sequence_nuisance_matched.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 31,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "07d550b0162371bbf162c17abfed65b7a347325b6f5690fe89e4c97163481c2e",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 1305,
+      "unordered_pair_duplicate_groups": 1215,
+      "unordered_pair_mixed_label_groups": 379
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_primary",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__tppni2025_scm_cl3_exact_balanced": 20818
+      },
+      "distributed": true,
+      "environment": "tppni2025_scm_cl3_exact_balanced",
+      "evidence_semantics": "source_label_retained_after_endpoint_shift",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "tppni2025_scm_cl3_exact_balanced": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Original row label remains attached after endpoint shift; mixed labels for a scored pair are retained.",
+      "path": "data/frozen_panels/E005_primary/test__tppni2025_scm_cl3_exact_balanced.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 37,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "f28af3df1674cc469158601d0dbe3287a9c08a4986f3f2b5a13b6f6fe711ce40",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 690,
+      "unordered_pair_duplicate_groups": 652,
+      "unordered_pair_mixed_label_groups": 27
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "E005_primary",
+      "dataset_names": {
+        "gold_intra2_pos": 20818,
+        "gold_intra2_pos__uniform_partner": 20818
+      },
+      "distributed": true,
+      "environment": "uniform_partner",
+      "evidence_semantics": "source_label_retained_after_endpoint_shift",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 20818,
+      "n_positive": 20818,
+      "negative_environments": {
+        "uniform_partner": 20818
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 20818
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Original row label remains attached after endpoint shift; mixed labels for a scored pair are retained.",
+      "path": "data/frozen_panels/E005_primary/test__uniform_partner.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 41636,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 30,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "5373d588f0c4357048c29a0bfcb6f45a848993638ec75005573561289fa15197",
+      "shared_across_cohorts": false,
+      "split": "test",
+      "unordered_pair_duplicate_extra_rows": 968,
+      "unordered_pair_duplicate_groups": 912,
+      "unordered_pair_mixed_label_groups": 311
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "RBT_fully_random",
+      "dataset_names": {
+        "gold_intra1_pos": 98328
+      },
+      "distributed": true,
+      "environment": "fully_random",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 49164,
+      "n_positive": 49164,
+      "negative_environments": {
+        "fully_random_pair": 49164
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 49164
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/RBT_fully_random/train__fully_random.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 98328,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "91a8612c3b67cbcc8b6498941674bda9189dcdad20792ae28d926caa59a7c1af",
+      "shared_across_cohorts": false,
+      "split": "train",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    },
+    {
+      "availability": "PAIRS_DISTRIBUTED",
+      "cohort": "RBT_fully_random",
+      "dataset_names": {
+        "gold_intra0_pos": 47504
+      },
+      "distributed": true,
+      "environment": "fully_random",
+      "evidence_semantics": "synthetic_unobserved_pair",
+      "hash_visibility": "RELEASE_BYTES_ONLY",
+      "n_negative": 23752,
+      "n_positive": 23752,
+      "negative_environments": {
+        "fully_random_pair": 23752
+      },
+      "negative_semantic_classes": {
+        "synthetic_unobserved_pair": 23752
+      },
+      "pair_duplicate_policy": "Preserve frozen row multiplicity; do not deduplicate; retain labels as frozen.",
+      "pair_identity_basis": "unordered pair of scored endpoint sequence SHA256 values",
+      "pair_label_policy": "Mixed labels for the same scored sequence pair fail source validation.",
+      "path": "data/frozen_panels/RBT_fully_random/validation__fully_random.csv.gz",
+      "rights_note": "Gold CC BY 4.0 backbone; project-generated synthetic pairs. See NOTICE.md.",
+      "rights_status": "CLEARED",
+      "rows": 47504,
+      "score_convention": "raw_probability",
+      "scored_self_pair_rows": 0,
+      "sequence_columns_removed": [
+        "seq1",
+        "seq2"
+      ],
+      "sha256": "6cb919c62394e2b64de50eb2d2a49cdd59c487e9a813c8b09f81a6d2d18e6a03",
+      "shared_across_cohorts": false,
+      "split": "validation",
+      "unordered_pair_duplicate_extra_rows": 0,
+      "unordered_pair_duplicate_groups": 0,
+      "unordered_pair_mixed_label_groups": 0
+    }
+  ],
+  "schema_version": 2
+}

@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "Cite the associated paper and source datasets in NOTICE.md."
+title: "Constructed Negatives Shape the Evaluation of Sequence-Based Protein-Protein Interaction Models: anonymous resources"
+type: software
+authors:
+  - name: "Anonymous Authors"
+version: "submission-1"
+license: MIT

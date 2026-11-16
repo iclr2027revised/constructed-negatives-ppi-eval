@@ -1,0 +1,85 @@
+{
+  "accessed": "2026-11-13",
+  "doi": "10.6084/m9.figshare.21591618.v4",
+  "files": [
+    {
+      "computed_md5": "4d09773d72d6750894464b5457e29693",
+      "download_url": "https://ndownloader.figshare.com/files/41270466",
+      "id": 41270466,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "Intra0_neg_rr.txt",
+      "size": 414832,
+      "supplied_md5": "4d09773d72d6750894464b5457e29693"
+    },
+    {
+      "computed_md5": "234b5ce2751053d142fe4b4bea3ca0a7",
+      "download_url": "https://ndownloader.figshare.com/files/41270469",
+      "id": 41270469,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "Intra0_pos_rr.txt",
+      "size": 414828,
+      "supplied_md5": "234b5ce2751053d142fe4b4bea3ca0a7"
+    },
+    {
+      "computed_md5": "fac611b21a47954db479d11f9695abda",
+      "download_url": "https://ndownloader.figshare.com/files/41270472",
+      "id": 41270472,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "Intra1_neg_rr.txt",
+      "size": 1142344,
+      "supplied_md5": "fac611b21a47954db479d11f9695abda"
+    },
+    {
+      "computed_md5": "f246532977cca5da9fe287d6a6055f3c",
+      "download_url": "https://ndownloader.figshare.com/files/41270475",
+      "id": 41270475,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "Intra1_pos_rr.txt",
+      "size": 1142344,
+      "supplied_md5": "f246532977cca5da9fe287d6a6055f3c"
+    },
+    {
+      "computed_md5": "21868ab122346bff3eebedaca7f4f8c3",
+      "download_url": "https://ndownloader.figshare.com/files/41270478",
+      "id": 41270478,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "Intra2_neg_rr.txt",
+      "size": 364336,
+      "supplied_md5": "21868ab122346bff3eebedaca7f4f8c3"
+    },
+    {
+      "computed_md5": "d7171f30eb280b6745d3069a73c77c59",
+      "download_url": "https://ndownloader.figshare.com/files/41270481",
+      "id": 41270481,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "Intra2_pos_rr.txt",
+      "size": 364336,
+      "supplied_md5": "d7171f30eb280b6745d3069a73c77c59"
+    },
+    {
+      "computed_md5": "e42c282763861e0cf7d71fc78f00649f",
+      "download_url": "https://ndownloader.figshare.com/files/52237748",
+      "id": 52237748,
+      "is_link_only": false,
+      "mimetype": "text/plain",
+      "name": "human_swissprot_oneliner.fasta",
+      "size": 11561571,
+      "supplied_md5": "e42c282763861e0cf7d71fc78f00649f"
+    }
+  ],
+  "historical_identity_note": "Local historical v3/v4 naming conflicts are not resolved by renaming. Published v4 adds Q96PU5 to the sequence auxiliary file. These are public upstream download checksums, not private materialized-source hashes.",
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "value": 1
+  },
+  "metadata_url": "https://api.figshare.com/v2/articles/21591618/versions/4",
+  "source": "Bernett et al., PPI prediction from sequence, gold standard dataset",
+  "version": 4
+}

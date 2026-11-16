@@ -1,0 +1,28 @@
+# Interpreter and tool caches must never reach the release tree: a .pyc embeds
+# the absolute path it was compiled at, and that path names the build machine.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Outputs written by running the package.  These are not distributed inputs and
+# are deliberately excluded from manifests/INTEGRITY.json.
+results/figures_regenerated/
+results/tables/reproduction_report.json
+
+# External data asset: retain on disk; host the data ZIP separately.
+data/frozen_panels/
+data/sequence_registry/
+results/pointwise/
+results/fully_random_pointwise/
+figures_regenerated/
+results/tables/validation_report.json
+.venv/
+manifests/validation_report.json
+results/fully_random_external_pointwise/
+results/shuffle_pointwise/
+results/external_pointwise/
+results/common_512_pointwise/
+results/validation_pointwise/

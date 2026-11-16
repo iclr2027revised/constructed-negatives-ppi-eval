@@ -1,0 +1,2 @@
+# Preserve exact manifest-covered bytes in a fresh Git checkout.
+* -text

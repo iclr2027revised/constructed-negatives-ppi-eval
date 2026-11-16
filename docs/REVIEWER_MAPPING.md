@@ -1,0 +1,12 @@
+# Reviewer-point resource mapping
+
+| Reviewer point | Concrete resource | Limit |
+|---|---|---|
+| 8vim W6, repository completeness | README; all 44 panel files; RESOURCE_INVENTORY; checkpoint inventory; all 1,296 Gold + 432 512-shuffle + 1,152 external + 864 common-512 + 72 Fully Random Gold + 24 Fully Random external score cells; all 144 validation thresholds; all 21 sanitized R2 PDFs | No checkpoint `.pt` binaries or ESM2 embedding caches, no full training/inference reproduction |
+| 8vim major shuffle error | `results/pointwise/E005_core/**` (unshuffled 1024); `results/pointwise/E005_primary/**` (shuffled 1024); `results/shuffle_pointwise/E003_corrected_512_shuffle/**` (shuffled 512); `corrected_shuffle_deltas.csv`; R2 Figure 3 | All 864 unshuffled and 864 shuffled prediction cells verified at prediction level |
+| 8vim W1 / YR2D Q2, external generalization | `results/external_pointwise/{e003_512,e005_1024}/**` (1,152 cells); `EXTERNAL_ALL_SEED_METRICS.csv`; `VIDAL_ALL_STRATA_SEEDS.csv`; R2 Figure 4 | Near-chance performance retained; exact-sequence novelty not family OOD |
+| 8vim W4/Q2 and YR2D, sampler & model definitions | `docs/PROCEDURES.md`; `src/ppi_shift`; `src/ppi_shift_release/models/dscript_esm2.py`; `dscript_esm2_backbone_provenance_42_units.csv`; R2 Figure 1 | Confirms D-SCRIPT used ESM2-150M (640-d) across all 42 checkpoints; missing historical feature caches |
+| VX1x W3 / YR2D W4, sequence length | `results/common_512_pointwise/**` (864 cells on identical 512 test pairs); `MATCHED_512_1024_ALL_432_SEED_ROWS.csv`; `MATCHED_ALL_144_INTERVALS.csv`; R2 Figure 5 | Same frozen 512 test rows; not length-only causality |
+| Fully Random baseline | `FULLY_RANDOM_ALL_96_SEED_ROWS.csv`; 72 Gold + 24 external score cells (`results/fully_random_pointwise/**`, `results/fully_random_external_pointwise/**`); `E005_core` and `RBT` panels | Train and validation change together; all 96/96 Fully Random cells verified at prediction level |
+| Negative contamination / novelty | 11 audit tables; final Vidal overlap counts; homology seed table | Source coverage and sampled homology denominators retained |
+| Statistical uncertainty & thresholds | `configs/bootstrap/*.json`; `scripts/reproduce_bootstrap.py`; `validation_selected_thresholds_144_units.csv`; `reported_mcc.csv` (864 cells); `results/validation_pointwise/E005_core/**` | Three seeds descriptive; pair bootstrap conditional on models |

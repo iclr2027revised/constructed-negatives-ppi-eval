@@ -1,0 +1,236 @@
+experiment_id: E005
+config_version: ppi_shift.e005_core4_1024.v1
+design_status: draft_pending_live_fidelity_and_length_gates
+purpose: Full new-training 1024-AA replication of verified executed E003 Core-4, reusing
+  independently verified frozen E004 panels. Cross-cohort deltas are descriptive;
+  common-test-panel contrasts use unchanged checkpoints and validation thresholds.
+parent:
+  # Source-control identifiers for the private development history are
+  # withheld for double-blind review. Every scientific field below is the
+  # value that was executed; only the commit and branch names are replaced.
+  experiment_id: E003
+  source_branch: WITHHELD_FOR_DOUBLE_BLIND_REVIEW
+  source_commit: WITHHELD_FOR_DOUBLE_BLIND_REVIEW
+  dataset_source_experiment: E004
+  dataset_source_commit: WITHHELD_FOR_DOUBLE_BLIND_REVIEW
+  infrastructure_base_commit: WITHHELD_FOR_DOUBLE_BLIND_REVIEW
+  prior_artifacts_immutable: true
+compatibility:
+  max_raw_sequence_length: 1024
+  filter_before_candidate_universe: true
+  native_cropping: false
+  positive_backbone: exact frozen E004 1024-AA retained positives
+  balanced_core_prevalence: '1:1'
+  negative_semantic_class: synthetic_unobserved_pair
+  test_adaptation: forbidden
+  test_checkpoint_reselection: forbidden
+  test_threshold_selection: forbidden
+  full_residue_coverage_required: true
+negative_environments:
+  core:
+  - uniform_partner
+  - degree_partner_matched
+  - sequence_nuisance_matched
+  - esm_partner_matched
+  - bernett2026_ilp_exact
+  - tppni2025_scm_cl3_exact_balanced
+  bernett2026_ilp_exact:
+    upstream_repository: https://github.com/bionetslab/ppi-splitting-pipeline
+    upstream_revision: 8bf9adb183b702c88db62ff878de482e2f20e4b2
+    candidate_cap: 4 * positive_rows
+    candidate_pool: global_legal_upper_triangle
+    lambda_degree: 1.0
+    lambda_taxon_pair: 1.0
+    lambda_self_loop: 1.0
+    lambda_go_bp_jaccard: 1.0
+    solver: scipy.optimize.milp/HiGHS
+    time_limit_seconds: 7200
+    mip_rel_gap: 0.01
+    failure_policy: no_silent_fallback
+  tppni2025_scm_cl3_exact:
+    upstream_repository: https://github.com/jbusto/UPNA-PPI
+    upstream_revision: 20d1d8225e9d377434669973b7391697be6b4aa2
+    configuration_model: p_ij=1/(exp(lambda_i+lambda_j)+1)
+    topology: stage_local_positive_graph_exact_disconnected_component_projection_verified_against_full_frozen_1024_backbone
+    bottom_n: 10000000
+    l3_filter: exact_l3_count_equals_zero
+  tppni2025_scm_cl3_exact_balanced:
+    source_pool: tppni2025_scm_cl3_exact
+    selection: deterministic_without_replacement_from_sorted_l3_zero_pool
+    role: core_balanced_prevalence_sensitivity
+  tppni2025_scm_cl3_leakage_safe:
+    topology: stage_visible_positive_backbone
+    role: supplementary_leakage_safe_sensitivity
+models:
+  required:
+  - symmetric_frozen_esm2_pair_mlp
+  - tuna_corrected
+  - dscript_esm2
+  - rapppid
+  excluded_from_core:
+    senseppi:
+      status: optional_future_supplementary
+      reason: ESM2-3B cache and SENSE-PPI compute are outside the final Core-4 protocol
+      historical_source: REDACTED_FOR_DOUBLE_BLIND_REVIEW (SENSE-PPI, Volzhenin et al. 2023)
+      historical_representation: facebook/esm2_t36_3B_UR50D
+  source_revisions:
+    dscript_esm2: 23cbb0fbbb454d09ee41ff749c1454d8b3c8a4b8
+    tuna_corrected: b5bda8fee261a4f27821738db995cf5883dcd133
+    esm2_t30_150m: a695f6045e2e32885fa60af20c13cb35398ce30c
+    rapppid: c3a28be56fb3bd96ccf8cc44ea9145cfcadeaf6c
+  fidelity:
+    rapppid:
+      tokenizer: SentencePiece_unigram_vocab_250_training_sequences_only
+      encoder: AWD_LSTM_bidirectional_two_layers_hidden_64_per_direction
+      embedding_dropout: 0.3
+      weight_dropconnect: 0.3
+      class_head: concat_128_to_32_mish_to_1_dropout_0.2
+      optimizer: Ranger21
+      averaged_weights: stochastic_weight_averaging
+      initialization: clean
+  executed_contracts:
+    symmetric_frozen_esm2_pair_mlp:
+      backbone: facebook/esm2_t30_150M_UR50D
+      dimension: 640
+      feature_operator: sum_abs_difference_product
+      feature_scaler: train_only_StandardScaler
+      hidden_layers:
+      - 64
+      - 32
+      optimizer: sklearn_Adam
+      learning_rate: 0.001
+      alpha: 0.0001
+      epochs: 20
+      batch_size: sklearn_auto
+      selection: matched_validation_AUPRC_after_each_partial_fit_epoch
+    dscript_esm2:
+      backbone: facebook/esm2_t30_150M_UR50D
+      dimension: 640
+      architecture: D_SCRIPT_ESM2_150M_contact_CNN
+      optimizer: Adam
+      learning_rate: 0.001
+      batch_size: 1
+      gradient_accumulation: 1
+      epochs: 10
+      scheduler: null
+      loss: binary_cross_entropy_probability
+      length_adaptation: preserve_512_buffer_extend_positions_on_demand_no_contact_map_change
+    tuna_corrected:
+      backbone: facebook/esm2_t30_150M_UR50D
+      dimension: 640
+      architecture: official_TUnA_ESM2_150M_transformer_SNGP
+      optimizer: Adam_wrapped_Lookahead
+      learning_rate: 0.0001
+      weight_decay_weights: 1.0e-05
+      weight_decay_bias: 0
+      lookahead_alpha: 0.8
+      lookahead_k: 5
+      batch_size: 16
+      gradient_accumulation: 1
+      epochs: 14
+      scheduler: null
+      loss: BCELoss
+      training_gp_last_epoch: true
+      inference_last_epoch: false
+      inference_mean_field_adjustment: false
+      inference_pair_swap_average: true
+      length_adaptation: retain_512_training_pad_when_all_batch_inputs_at_most_512_else_1024_full_residues_no_crop
+      training_padding_rule:
+        maximum_residues: 1024
+        all_short_batch_pad: 512
+        any_long_batch_pad: 1024
+    rapppid:
+      source: official_AWD_LSTM_C3_path
+      embedding_size: 64
+      hidden_per_direction_actual: 64
+      recurrent_layers: 2
+      bi_reduce: last
+      class_head: concat_128_32_Mish_1_dropout_0.2
+      tokenizer: SentencePiece_unigram_vocab250_train_only
+      optimizer: Ranger21
+      learning_rate: 0.01
+      weight_decay: 0.0001
+      batch_size: 80
+      epochs: 100
+      averaged_weights: SWA
+      max_tokens: 1025
+      truncation: false
+      token_limit_reason: 1024_complete_residues_plus_native_SentencePiece_dummy_prefix_without_BOS_EOS
+matrix:
+  models: 4
+  train_environments: 6
+  test_environments: 6
+  seeds:
+  - 11
+  - 22
+  - 33
+  total_core_cells: 432
+  training_units: 72
+  validation_environment: matched_to_training_environment
+  checkpoint_selection: maximum_validation_auprc
+  threshold_selection: matched_validation_max_mcc
+  test_checkpoint_reuse_across_environments: true
+statistics:
+  primary_metric: auprc
+  secondary_metrics:
+  - auroc
+  - mcc
+  - balanced_accuracy
+  - f1
+  - brier
+  - nll
+  - ece
+  bootstrap_replicates: 2000
+  bootstrap_seed: 1729
+  global_pool_bootstrap: stratified_positive_negative
+  cluster_sensitivity: protein_endpoint_and_positive_backbone_cluster
+  seed_stability: separate_from_bootstrap
+  ranking_estimand: same_three_seed_environment_means
+  uncorrected_p_values: forbidden
+external_evaluation:
+  retraining_on_external_labels: false
+  checkpoint_or_threshold_selection_on_external_labels: false
+  source_experiment: E004
+  frozen_panels_require_live_hash_and_semantics_validation: true
+  surfaces:
+  - vidal_measured
+  - intact_curated
+  - biogrid_uniform
+  - biogrid_bernett
+  - biogrid_tppni
+  - string_uniform
+  - string_bernett
+  - string_tppni
+  expected_scoring_cells: 576
+freeze_gates:
+  protocol_freeze_before_corrected_test_score: true
+  sampler_and_panel_hashes_required: true
+  core_model_artifact_hashes_required: true
+  source_revision_hashes_required: true
+  no_main_merge: true
+  model_length_and_executed_identity_required: true
+  gpu_memory_and_step_time_preflight_required: true
+  test_scoring_allowed: false
+artifact_root: ${SEQUENCE_BENCHMARK_ARTIFACT_ROOT}/e005/core4_1024
+controls:
+  partner_shuffle_gold_cells: 432
+  common_e003_test_panel_cells: 432
+  shortcut_scope: verified_E003_scope
+  datasail_scope: verified_supported_E003_scope
+representations:
+  residue_tokens:
+    output_root: ${SEQUENCE_BENCHMARK_ARTIFACT_ROOT}/e005/core4_1024/representations/esm2_t30_150m_autocast_fp16
+    generator_source_commit: WITHHELD_FOR_DOUBLE_BLIND_REVIEW
+    generator_source_sha256: 822f3dd33b95d8193b8918eac6d2dffe273b8a2075e89dfcc8d80a970bf8facd
+    forward_policy: cuda_autocast_float16
+    storage_dtype: float16
+    consumer_dtype: float32
+    reuse_policy: exact_verified_sequence_revision_full_residue_records_only
+    E004_fp32_cast_substitution: false
+  frozen_mean:
+    source_core_store: ${SEQUENCE_BENCHMARK_ARTIFACT_ROOT}/e004/milattention_1024/final_union/e003_mean_store
+    pooling: overlap_corrected_residue_mean
+    window_residues: 1022
+    overlap_residues: 128
+    dtype: float32
+    external_full_coverage: pending_verification

@@ -1,0 +1,27 @@
+{
+  "cluster_sensitivity_policy": "paired_units_only_when_valid",
+  "input_prediction_files_modified": false,
+  "metric_convention": "historical_native_summary_AP_AUROC",
+  "outputs": {
+    "bootstrap_core.csv": {
+      "rows": 432
+    },
+    "cluster_sensitivity.csv": {
+      "rows": 864
+    },
+    "seed_spread.csv": {
+      "rows": 720
+    }
+  },
+  "primary_estimand": "mean_of_three_seed_metric_vectors",
+  "primary_resampling_scheme": "stratified_positive_negative_shared_rows",
+  "probability_clip": [
+    1e-07,
+    0.9999999
+  ],
+  "replicates": 2000,
+  "reversal_diagnostics": {
+    "eligible_comparisons": 3780
+  },
+  "seed_base": 1729
+}

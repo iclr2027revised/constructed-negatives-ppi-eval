@@ -1,0 +1,19 @@
+experiment_id: RBT_RANDOM_PAIR_1024
+parent_experiment: E005
+sampling:
+  algorithm: PCG64_uniform_legal_upper_triangle_without_replacement
+  train_seed: 20261106
+  validation_seed: 20261107
+  universe: exact_frozen_E005_stage_positive_proteins
+  self_pairs: forbidden
+  exclusions: stage_visible_Gold_identifier_and_exact_sequence_positive_registries
+  test_labels_for_generation: forbidden
+  negative_semantics: synthetic_unobserved_pair
+  ratio: '1:1'
+models: [symmetric_frozen_esm2_pair_mlp, tuna_corrected, dscript_esm2, rapppid]
+seeds: [11, 22, 33]
+selection: maximum_matched_random_validation_AUPRC
+threshold: maximum_matched_random_validation_MCC
+test_environments: frozen_E005_six_unchanged
+restart: reuse_hash_verified_complete_checkpoint_or_new_preserved_attempt_from_initialization
+scientific_scope: training_and_matched_validation_intervention_not_training_only
