@@ -21,6 +21,10 @@ No test-set threshold is selected. All 144 validation-selected thresholds (72 E0
 
 External predictions for all 8 surfaces (`vidal__measured`, `intact__measured`, `biogrid__uniform_partner`, `biogrid__tppni2025_scm_cl3_exact_balanced`, `biogrid__bernett2026_ilp_exact`, `string__uniform_partner`, `string__tppni2025_scm_cl3_exact_balanced`, `string__bernett2026_ilp_exact`) across both E003 (576 cells) and E005 (576 cells) are included in `results/external_pointwise/` plus all 24 Fully Random external prediction cells (`results/fully_random_external_pointwise/`, covering `vidal__measured` and `intact__measured`) are included and verified by `python scripts/verify_additional.py --scores`.
 
+## Evaluating a new model
+
+`scripts/evaluate_predictions.py` defaults to `--cohort E005_core` (the normal unshuffled 1024-residue Gold evaluation using `probability_clip_1e-7`). Pass `--cohort E005_primary` explicitly to evaluate broken-pair partner-shuffled controls (`raw_probability`). See `README.md` for copy-paste examples.
+
 ## Uncertainty
 
 Bootstrap configuration manifests are shipped in `configs/bootstrap/e005_uncertainty_manifest.json` and `configs/bootstrap/e005_common_test_uncertainty_manifest.json` and verified by `python scripts/reproduce_bootstrap.py`. Paired row bootstrap resamples the same test rows for both score vectors (2,000 replicates, seed base 1729). The reported intervals measure test-row sensitivity. One-endpoint grouping is a separate sensitivity and does not model dependence through both endpoints. The three training seeds (11, 22, 33) describe those runs only and are not biological replicates.

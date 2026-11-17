@@ -1,4 +1,4 @@
-"""Redraw verified diagonal metrics separately from frozen paper artwork."""
+"""Redraw verified Main Figure 5 (formerly R2 Figure 6) diagonal metrics separately from frozen paper artwork."""
 from pathlib import Path
 import csv
 import sys

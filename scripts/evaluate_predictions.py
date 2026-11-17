@@ -3,9 +3,18 @@
 
 Example
 -------
+    # Normal unshuffled 1024-residue Gold evaluation (default: --cohort E005_core)
     python scripts/evaluate_predictions.py \
         --predictions my_predictions.csv \
+        --panel uniform_partner \
         --output results/my_model
+
+    # Partner-shuffled 1024-residue control evaluation (explicit --cohort E005_primary)
+    python scripts/evaluate_predictions.py \
+        --predictions my_shuffled_predictions.csv \
+        --cohort E005_primary \
+        --panel uniform_partner \
+        --output results/my_model_shuffled
 
 The prediction file needs ``row_id`` and ``score`` columns.  If it carries a
 ``panel`` or ``environment`` column, each value is evaluated against the matching
@@ -30,8 +39,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from ppi_shift_release import panels, predictions  # noqa: E402
 
 # The manifest names the cohorts after the experiment that produced them; the
-# short aliases are what a reader types.  ``E005`` means the broken-pair
-# evaluation cohort, which is not the E005 core test split.
+# short aliases are what a reader types.  Ordinary new-model evaluation defaults
+# to ``E005_core`` (unshuffled 1024-residue Gold).  ``E005_primary`` (and its
+# legacy alias ``E005``) selects the broken-pair partner-shuffled control cohort.
 COHORT_ALIASES = {
     "E003": "E003_corrected_replay",
     "E005": "E005_primary",
@@ -82,12 +92,19 @@ def _write_subset(path: Path, rows: list[dict[str, str]]) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     parser.add_argument("--predictions", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--panel", default=None, help="panel environment name")
-    parser.add_argument("--cohort", default="E005_primary", choices=COHORT_CHOICES)
+    parser.add_argument(
+        "--cohort",
+        default="E005_core",
+        choices=COHORT_CHOICES,
+        help="cohort to evaluate (default: E005_core unshuffled 1024-residue Gold; pass E005_primary for partner-shuffling controls)",
+    )
     parser.add_argument("--split", default="test", choices=("train", "validation", "test"))
     parser.add_argument("--bootstrap-replicates", type=int, default=2000)
     parser.add_argument("--bootstrap-seed", type=int, default=1729)
@@ -158,9 +175,10 @@ def main(argv: list[str] | None = None) -> int:
             "bootstrap_seed": args.bootstrap_seed,
             "results": rows,
             "note": (
-                "AUROC and AUPRC use the frozen convention: raw scores, estimator-resolved "
-                "ties, no jitter. AUPRC is reported next to the prevalence baseline because "
-                "AUPRC is prevalence-dependent."
+                "AUROC and AUPRC use each panel's frozen cohort convention "
+                "(score_convention), with estimator-resolved ties and no jitter. "
+                "AUPRC is reported next to the prevalence baseline because AUPRC "
+                "is prevalence-dependent."
             ),
         },
     )

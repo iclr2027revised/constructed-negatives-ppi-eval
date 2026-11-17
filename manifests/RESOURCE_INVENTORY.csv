@@ -3,11 +3,11 @@ path,archive,bytes,sha256,evidence_level,license_scope,source
 .gitignore,core,871,4ecfaa32ed0338c9206d460c38d263b29405f8d523d87510f20d9e58877ef858,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 CITATION.cff,core,307,1dc896ae1c7a6bc9ba63a116244c9e65832333eb56d6dad06ed4fa041df1c9a8,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 LICENSE,core,1585,e553c9a20319f686ded8d0afd48248a5fedced05d4238d0b690351b89ee0dc23,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-LIMITATIONS.md,core,3023,41a62d8573f3948b0f5e3ab60ad7cfaa342d4ef112957803829ada224de3589e,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
+LIMITATIONS.md,core,3232,33fe0e8946e7f4be8ed89fcac54b60f646aa5dc92a773bb9804a75aff3f18874,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 NOTICE.md,core,4027,b517163d1c5e424615d533c7c2939982eb2278c5531460c68a123a22d6964942,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 PROVENANCE.md,core,990,eedbf2908cf6061f6950bc43c160eebd113dffc75e99568fd9a50c7305805062,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-README.md,core,9301,4694f8bcaef78093b788749091a381935efd32333ff298c6851aa661ecc89426,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-REPRODUCTION.md,core,1825,44f987459328764dfcc28fc1ddc42f9f61422cbefbecd0025c2aed6088401568,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
+README.md,core,12748,bb9c52eeed3a5522a707989b3f8f4d6c1c544921f400d9ad1569b9929819f8f8,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+REPRODUCTION.md,core,2555,d28918a813eb49d286b9b67b44dfc072bb21c4548c5c8152e33d4f0c971a5dac,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 configs/README.md,core,2310,5f45bc9d0bd2b35106d2c3379d7fb386b7ce91cba0740086fb767f34c9ea7bf2,code_or_documentation,MIT,Anonymous Authors
 configs/bootstrap/e005_common_test_uncertainty_manifest.json,core,567,0f6661cd0a353c65ecaebdb01449e59ff629e26b453d630176866ea2bf92ebdf,code_or_documentation,MIT,Anonymous Authors
 configs/bootstrap/e005_uncertainty_manifest.json,core,649,64cb050b0f5df82fcba189cee9a73bab6f3bf1b5d3ddf96b1df07e5bf7b0599d,code_or_documentation,MIT,Anonymous Authors
@@ -67,16 +67,19 @@ data/sequence_registry/sequences.fasta.gz,data_part01,7526855,b2cc9f656d058ade87
 docs/ATTRIBUTION.md,core,748,32c836b644940ef4f50f872dc3c4a840abb8f1edb830ecdaf31c5d4454d8b304,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 docs/AUDIT_TABLES.md,core,4282,ef986012818113f9c06baf71e85d3f0e62c623779fed781eea65d6a6cd3301f5,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 docs/DATASETS.md,core,4033,d9701e59d675cdb69f4753cf266541f2b32cd45f3a2e3e3ffb8f8035f6173b7e,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-docs/EVALUATION.md,core,3652,fa249829cefa0e4f9d6b34be1b7b01cf254bee8ca0489d6371c442189566d660,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-docs/FIGURE_COVERAGE.md,core,1955,142019d526ff8b40052512419d4f88a3d70900d5da9b39b791c173975429d00c,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-docs/LIMITATIONS.md,core,4683,9a013619e89c31258c7a718e91c100fa06f64791766c383a92c7a21a235eed8b,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-docs/PROCEDURES.md,core,4144,4331f6e1bc54589c631d9b77ddc0fa1eb77f5ca4a3a1e27fe3922dc4646c59cc,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-docs/REPRODUCTION.md,core,1526,ee5ac9f0872f2c401198795c3357f838fc079063ebb670835f54432185e8d8c1,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-docs/REVIEWER_MAPPING.md,core,2426,2550de3faa478ecf3769bc76487c6663bec5a36e5c572fd36a4087594c0c69ed,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+docs/EVALUATION.md,core,3983,7ba88693f2eaaa1f57b02d6e5b8fd8c30d46d73cc71dee9ba4fb2114c138c41a,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+docs/FIGURE_COVERAGE.md,core,2775,29e51e8ab1968ccea5c766597b72288eb8b6aa0aacf501d1b7f397c4dd7e93e9,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+docs/LIMITATIONS.md,core,4840,7f8f32a27d7353e82c93b677c07daea36eaad427d576168a0b353968fdc67b5c,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+docs/PROCEDURES.md,core,4301,8d0e903216ce0a4ed7a09e1177d4795ace2260e4b072fc0c44aa0a5dd7985f28,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+docs/REPRODUCTION.md,core,2298,8221db9fb07bc06d799912f024b56836df55761a2d3a541270b7839364304f39,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+docs/REVIEWER_MAPPING.md,core,2516,50d06b767fa87516a6a0fd4f73883ffc1fbed19e6ede6727176daadd8df9d777,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 environment.yml,core,225,f6db65735d20412c3fcab22a577211a2a482f696e12cac806a2e73119b5187c8,code_or_documentation,MIT,Anonymous Authors
 figures/R2/fig02_original_submitted.pdf,core,22809,44b400c8082c5e957deeef460d81bb33f054b6221d7e8a99f21f825587f81f23,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
 figures/R2/fig03_corrected_shuffling.pdf,core,18030,12f223bd2912544444d809f85ea0b52c6a3b00ea18a5dfe4488ecdb32fde7cec,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
+figures/R2/fig03_corrected_shuffling_final.pdf,core,35521,52651ab574880fdefde06f3a9717353b8b6af345371235e0d34ad4809ed8f29e,figure_artwork_final_verbatim,CC-BY-4.0,Anonymous Authors
 figures/R2/fig04_absolute_measured.pdf,core,20818,47c6cdce5cb6f2c64ed68ef8d3dcdad4e11b10743a18f4b0e18296d5040b76a2,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
+figures/R2/fig04_absolute_measured_final.pdf,core,31853,5e646927786172aba143f556469ec063e4766c1530ee557fab1cfcfcb81a4141,figure_artwork_final_verbatim,CC-BY-4.0,Anonymous Authors
+figures/R2/fig04_measured_512_only.pdf,core,31487,f58629339424be54d459f75a6bedd06394a2e918ec4f14d9abc47b9533aac8c7,figure_artwork_final_verbatim,CC-BY-4.0,Anonymous Authors
 figures/R2/fig06_pooled_esm_baselines.pdf,core,27502,0ab03b3bedda0f6e1ca037651633e792cc5bf29d716d8c0ac37820de4cd8b1fa,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
 figures/R2/figS01_absolute_auprc.pdf,core,25863,27e483c1a4c8521be067365d0a0e42b82b08b43e2b629b15c7f4e5b4013dfd27,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
 figures/R2/figS02_external_transfer.pdf,core,31467,b61fbe05bbf39fe287e00294c3d928e89b8ae092d319aa1b0fb03410093a18a5,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
@@ -95,6 +98,7 @@ figures/R2/figS14_datasail.pdf,core,19549,ac95769e69196cf219ff0241086d2c4cbd406e
 figures/R2/figure_design.pdf,core,26581,ea9926e995a17b22860ef75d401141cd53afcd545011c3635302f64be4693f50,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
 figures/R2/figure_full_matrices.pdf,core,20057,a739e621f84ff99b811591238c5e989a42abd459d6ff0203f2087a44d278059e,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
 figures/R2/figure_replication.pdf,core,20752,22116262dd2711d175f787042410694fd0626b7e06ec69f1649671a4f7673e74,figure_artwork_r2_sanitized,CC-BY-4.0,Anonymous Authors
+figures/R2/figure_replication_final.pdf,core,22766,80d9bac825ae5ece54a757feb5737f1ff99e0a23d34d18ca7e4a6464b28da86c,figure_artwork_final_verbatim,CC-BY-4.0,Anonymous Authors
 figures/convergence/convergence_best_vs_final_epoch.pdf,core,17468,485fba85fedb3b3cabae534c42ba272a3b2a2560ce97d6730e47a21fb79a0d76,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 figures/convergence/convergence_best_vs_final_epoch.png,core,73317,76bb39f3fb20661c128c12a0b2ca6c18db9f0e4db19e2dafaaff188002c24a07,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 figures/convergence/convergence_best_vs_final_epoch.source.csv,core,83363,a3f63b1e61164b46e9c0459a797b57d4ca86f0ff088e2cb736c451d18a2a11a1,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
@@ -133,13 +137,13 @@ manifests/ASSET_FILES.json,core,394820,ed08f700e36fb6c2e39cf14f2979e8cac1cd80bfa
 manifests/CHECKPOINT_INVENTORY.csv,core,41179,24a6415bbdd83c78ac6b95aff08b327a6e46b12427304130241fae29f1fad79e,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 manifests/COVERAGE_MATRIX.csv,core,4569,8502921adb2f81b3f584c07df02c7d8f3e92066a5cad8ff282f6fb94b80e868b,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 manifests/EXPECTED_VALUES.json,core,6615,1ccbd69c03edb538b2529c1399899451f78a170041585b5e602ba8b41f7b16a4,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-manifests/FINAL_CONTENT_COVERAGE.csv,core,89347,d45e9484991829776e19cdbead45ba60fbdfa7a9d91f2d49a3af79e33866173a,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
+manifests/FINAL_CONTENT_COVERAGE.csv,core,90475,bd1e12a8dee99f2c67c7faac2246807997261120e5f0332c5d45b8ff686e9e90,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 manifests/FULLY_RANDOM_EXTERNAL_PREDICTIONS.csv,core,4190,5984bf469e5e59a37410b997bd0de5664daed03459477b509e54b6b1e54f41e0,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 manifests/FULLY_RANDOM_PREDICTIONS.csv,core,11666,94d7a0a64ac21cc376ee7315a3e71b1ba824f0f2d9ee42bef03e527540133043,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-manifests/PAPER_ARTWORK_BINDING.json,core,294,4878584db470d3fc034b53a13972924860f7510a310341ed7290cf7942951848,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
+manifests/PAPER_ARTWORK_BINDING.json,core,411,9c35bd1ccefddf8280d21a34f168f108a17474eea98b13329a677419309e2764,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 manifests/PROVENANCE.csv,core,48840,8866c2ff6477cf2bc8720edb4a8f42cf6c14c69dfcb8aa911b8d4b326e282e50,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-manifests/R2_FIGURES.csv,core,10722,88a26627235d73459c99244111a9361403f252d555e04321b55832fc6f65faa3,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
-manifests/THIRD_PARTY_ATTRIBUTION.json,core,406,dc07404d4dc63f9549401612bd239e6f63809a059e301a78c2fe2b72ed68c7df,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+manifests/R2_FIGURES.csv,core,13038,f84e33ab353fd36624c46963f055765581092e9e1526d986a8f0fe5df4e9d0b4,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
+manifests/THIRD_PARTY_ATTRIBUTION.json,core,439,1a88a3bd955e2eead7e05edcffb9a99c5e44909947bb50f19dd51b500a5cc235,code_or_documentation,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 pyproject.toml,core,566,dafd992bfec6ff65d025d8afe63bb751284173100c91df0e215e4359911089e9,code_or_documentation,MIT,Anonymous Authors
 reproduce.py,core,50038,9f4ed24ff6bc4ba3ed47101a7c24e86b467ff26e8989de0009c982f581779354,code_or_documentation,MIT,Anonymous Authors
 requirements-lock.txt,core,384,3264b921cf7fb6eaa88f92542e1924595fb5096c700895f84be741c10d685169,code_or_documentation,MIT,Anonymous Authors
@@ -1640,16 +1644,16 @@ results/validation_pointwise/E005_core/validation__tppni2025_scm_cl3_exact_balan
 results/validation_pointwise/E005_core/validation__uniform_partner__all12_models.csv.gz,data_part02,6490586,ffac33b0060bddf6084297101e79fb3355b0914f1ee7608558815b9470845197,saved_prediction_rows,CC-BY-4.0; upstream attribution in NOTICE.md,Anonymous Authors
 scripts/acquire_gold.py,core,1219,dc516870c5f9c8a7a7bb2368c3fd060a59504f5afd98f83c25b151465879b501,code_or_documentation,MIT,Anonymous Authors
 scripts/derive_expected_values.py,core,5940,87eaf086d582c2253712d4a96ca570e00ea861d40b49d783f826b95d4945e891,code_or_documentation,MIT,Anonymous Authors
-scripts/evaluate_predictions.py,core,6388,82492387917b1e0143b73da8e9ebd92eeee67e713946c2056687850d7bb52fba,code_or_documentation,MIT,Anonymous Authors
-scripts/plot_figure6.py,core,1308,a51872c0b2ebea04148771023c5914eac4918301a7d1fc439507a1d5df49289d,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
+scripts/evaluate_predictions.py,core,7189,812484de8aab3dbbcb078477b30b691e2d280ea72995d439a77d316078abd945,code_or_documentation,MIT,Anonymous Authors
+scripts/plot_figure6.py,core,1345,648f2b370fa7b3dfce5ff3f6ca826b25f5c555c67d03b7a21bc51bd17d6e04ed,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 scripts/reproduce_bootstrap.py,core,19446,39ec31c801568c2c19bb2058c798a1caeb704008be6b06b62460cfa794b5a2d0,code_or_documentation,MIT,Anonymous Authors
-scripts/reproduce_figures.py,core,28590,37cab5bc3d0fa757dbad7a20db104570b4165acecf195ba7e987ca093d550b79,code_or_documentation,MIT,Anonymous Authors
+scripts/reproduce_figures.py,core,28623,8949090456b08d26f7e24c30583d6baa5d7d95484fe36e48299270493c570abd,code_or_documentation,MIT,Anonymous Authors
 scripts/reproduce_metric_tables.py,core,2183,00d854cf9ce6f757fdb82e4b736034fbcc1596080c5e853d8c926f41181f7b48,code_or_documentation,MIT,Anonymous Authors
 scripts/reproduce_results.py,core,6890,76fe942dcac800da194bb44f8c1f341d3ab41df26293206df82bafde6ed7f065,code_or_documentation,MIT,Anonymous Authors
 scripts/validate_release.py,core,22544,efb2c27d0a6fd3b0a94e8b86d1fd3d1e9c0d8fd340b00398a226e820c6f5473d,code_or_documentation,MIT,Anonymous Authors
 scripts/verify_additional.py,core,15432,c0ad884c461dec8ed2f26435b057bbf9f520d03b1e0d9aad7777b57f6d6ce15e,code_or_documentation,MIT,Anonymous Authors
 scripts/verify_datasets.py,core,4760,5789e1936352efdb61ade00330a724b31adfcea51421a481dd5b1af27565432b,code_or_documentation,MIT,Anonymous Authors
-scripts/verify_final.py,core,4411,3d24d7cfc1076ca5c15a343f45cc9f1fd0497a3db65ec9af936360994ea22dfa,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
+scripts/verify_final.py,core,5720,a4287891e156f854ccfdb3be3297fef7683cc2a06395303b042387558455cf28,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 scripts/verify_installation.py,core,2862,5f417ad1be83ecec7b229d7466458b843e2f54cc3c46ef482640ddf7e3155089,code_or_documentation,MIT,Anonymous Authors
 scripts/verify_sampler.py,core,2250,9b9510809012ebcd18fdc640396f5c41a836f077d0cbf05a0bc6677d78634853,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 scripts/verify_summary.py,core,1064,bc5989620604eebd50dff1d0d65e23d5bf46bc142dfa78022a830313235dab98,code_or_documentation,MIT,Anonymous Authors
@@ -1672,4 +1676,4 @@ src/ppi_shift_release/predictions.py,core,6780,cab012d919ed614663198ff018c0c349e
 src/ppi_shift_release/tables.py,core,14200,a9ac856ff8874ff261752378dbe7490c7c61d7cefe68460b23b0e5219b7cbdf7,code_or_documentation,MIT,Anonymous Authors
 tests/fixtures/sampler_expected.json,core,9135,e315518c014847799376f7d207e923c71a0b4e3b5cbdd59a7961e7396861ce65,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
 tests/test_final_package.py,core,1491,b4d4d1b9e3da22e38f05fa2b99d337a0fd1918c60b7201d93480df6c335e5644,code_or_documentation,MIT (code) / CC-BY-4.0 (docs & tables); upstream attribution in NOTICE.md,Anonymous Authors
-tests/test_release.py,core,34955,b2b990b8213cb3aa3805ba7444e832ff801d6ed3c28efbaf379f794c38ea083b,code_or_documentation,MIT,Anonymous Authors
+tests/test_release.py,core,40886,6b45ccbbd05aa5f1169124cb56faff62093f74545325ac771068f0b888026563,code_or_documentation,MIT,Anonymous Authors

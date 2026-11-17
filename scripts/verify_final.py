@@ -16,9 +16,17 @@ def rows(path):
 
 def verify():
     figures = rows(ROOT / 'manifests/R2_FIGURES.csv')
-    assert len(figures) == 21
-    assert len({row['filename'] for row in figures}) == 21
-    assert [row['figure'] for row in figures[:6]] == [f'Main Figure {i}' for i in range(1, 7)]
+    assert len(figures) == 25
+    assert len({row['filename'] for row in figures}) == 25
+    current_figures = [row for row in figures if row['status'] == 'current']
+    historical_figures = [row for row in figures if row['status'] == 'historical']
+    assert len(current_figures) == 22
+    assert len(historical_figures) == 3
+    assert [row['figure'] for row in current_figures[:5]] == [f'Main Figure {i}' for i in range(1, 6)]
+    assert [row['figure'] for row in current_figures[5:]] == [f'Appendix Figure {i}' for i in range(1, 18)]
+    binding = json.loads((ROOT / 'manifests/PAPER_ARTWORK_BINDING.json').read_text(encoding='utf-8'))
+    assert binding['figure_count'] == len(current_figures) == 22
+    assert binding['historical_figure_count'] == len(historical_figures) == 3
     for row in figures:
         path = ROOT / row['filename']
         assert path.stat().st_size == int(row['bytes']), row['filename']
@@ -68,22 +76,38 @@ def verify():
             ['git', '-C', str(ROOT), 'log', '--all', '--format=%H|%P|%an|%ae|%cn|%ce'],
             text=True,
         ).strip().splitlines()
-        assert len(log) == 1, f'expected single anonymous commit, got {len(log)}'
-        sha, parents, an, ae, cn, ce = log[0].split('|')
-        assert parents == '', f'commit {sha} has parents: {parents}'
-        assert an == 'Anonymous Authors' and cn == 'Anonymous Authors'
+        assert len(log) >= 1, 'expected at least one anonymous commit'
         expected_email = 'anonymous' + chr(64) + 'iclr2027.invalid'
-        assert ae == expected_email and ce == expected_email
-        git_ancestry = 'SINGLE_ANONYMOUS_ROOT_COMMIT'
+        shas = set()
+        roots = 0
+        for entry in log:
+            sha, parents, an, ae, cn, ce = entry.split('|')
+            shas.add(sha)
+            assert an == 'Anonymous Authors' and cn == 'Anonymous Authors', entry
+            assert ae == expected_email and ce == expected_email, entry
+            parent_list = parents.split() if parents else []
+            assert len(parent_list) <= 1, f'commit {sha} has merge parents: {parents}'
+            if not parent_list:
+                roots += 1
+        assert roots == 1, f'expected 1 anonymous root commit, got {roots}'
+        for entry in log:
+            sha, parents, *_ = entry.split('|')
+            for parent in (parents.split() if parents else []):
+                assert parent in shas, f'commit {sha} has external parent {parent}'
+        git_ancestry = (
+            'SINGLE_ANONYMOUS_ROOT_COMMIT'
+            if len(log) == 1
+            else f'LINEAR_ANONYMOUS_HISTORY_{len(log)}_COMMITS'
+        )
     assert not any(
         p.suffix.lower() in {'.pt', '.pth', '.ckpt', '.safetensors'}
         for p in ROOT.rglob('*')
         if '.git' not in p.parts and '.venv' not in p.parts
     )
-    return {'status': 'PASS', 'paper_figures': 21, 'actual_stage_panels': 44,
-            'figure6_exact_auroc_assertions': expected, 'crosswalk_rows': 1059,
+    return {'status': 'PASS', 'paper_figures': 22, 'historical_figures': 3, 'actual_stage_panels': 44,
+            'figure5_exact_auroc_assertions': expected, 'crosswalk_rows': 1059,
             'checkpoint_inventory_only': 114, 'additional_random_gold_score_files': 72, 'additional_random_external_score_files': 24,
-            'git_ancestry': git_ancestry, 'scientific_limit': 'Figure 6 inputs table-checked; no new fit or inference'}
+            'git_ancestry': git_ancestry, 'scientific_limit': 'Main Figure 5 (pooled-ESM baseline) inputs table-checked; no new fit or inference'}
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 {
-  "figure_count": 21,
-  "note": "Private manuscript TeX/PDF are not distributed; paper_artwork_sha256 in R2_FIGURES.csv binds the 21 PDFs referenced in the PI-approved Overleaf main_R2.tex revision.",
-  "paper_tex_sha256": "e7e2c7e970c03193013471b3e9b3815e884b73b22eb4136497d2c0303bedac41"
+  "figure_count": 22,
+  "historical_figure_count": 3,
+  "note": "Private manuscript TeX/PDF are not distributed; paper_artwork_sha256 in R2_FIGURES.csv binds the 22 unique PDFs (5 main figures, 17 appendix figures) referenced in the final manuscript, plus 3 superseded historical R2 PDFs preserved for traceability.",
+  "paper_tex_sha256": "c86eb83070976ffcc840096b00fd52190fee386e0ccee353a1a3b6a0fc7e48f5"
 }

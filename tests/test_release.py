@@ -280,6 +280,161 @@ def test_evaluate_predictions_reads_gzip(tmp_path: Path) -> None:
     assert [row["score"] for row in grouped["degree_partner_matched"]] == ["0.60"]
 
 
+def test_evaluate_predictions_defaults_to_e005_core_and_allows_explicit_e005_primary(
+    tmp_path: Path,
+) -> None:
+    """Default new-model evaluation targets unshuffled E005_core, not E005_primary."""
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+    import evaluate_predictions
+
+    root = tmp_path / "release"
+    (root / "data/manifests").mkdir(parents=True)
+    (root / "data/sequence_registry").mkdir(parents=True)
+    (root / "data/frozen_panels/E005_core").mkdir(parents=True)
+    (root / "data/frozen_panels/E005_primary").mkdir(parents=True)
+
+    core_rows = [
+        {
+            "row_id": "core_pos",
+            "interaction_label": "1",
+            "anchor_sequence_sha256": _sha(LEFT),
+            "true_partner_sequence_sha256": _sha(RIGHT),
+            "candidate_sequence_sha256": "",
+            "negative_environment": "",
+            "negative_semantic_class": "curated_positive_reference",
+        },
+        {
+            "row_id": "core_neg",
+            "interaction_label": "0",
+            "anchor_sequence_sha256": _sha(LEFT),
+            "true_partner_sequence_sha256": _sha(RIGHT),
+            "candidate_sequence_sha256": _sha(OTHER),
+            "negative_environment": "uniform_partner",
+            "negative_semantic_class": "synthetic_unobserved_pair",
+        },
+    ]
+    core_panel = root / "data/frozen_panels/E005_core/test__uniform_partner.csv"
+    with core_panel.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(core_rows[0]))
+        writer.writeheader()
+        writer.writerows(core_rows)
+
+    primary_rows = [
+        {
+            "row_id": "primary_pos",
+            "interaction_label": "1",
+            "anchor_sequence_sha256": _sha(LEFT),
+            "true_partner_sequence_sha256": _sha(RIGHT),
+            "candidate_sequence_sha256": "",
+            "broken_candidate_sequence_sha256": _sha(OTHER),
+            "negative_environment": "",
+            "negative_semantic_class": "curated_positive_reference",
+        },
+        {
+            "row_id": "primary_neg",
+            "interaction_label": "0",
+            "anchor_sequence_sha256": _sha(LEFT),
+            "true_partner_sequence_sha256": _sha(RIGHT),
+            "candidate_sequence_sha256": "",
+            "broken_candidate_sequence_sha256": _sha(OTHER),
+            "negative_environment": "uniform_partner",
+            "negative_semantic_class": "synthetic_unobserved_pair",
+        },
+    ]
+    primary_panel = root / "data/frozen_panels/E005_primary/test__uniform_partner.csv"
+    with primary_panel.open("w", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(primary_rows[0]))
+        writer.writeheader()
+        writer.writerows(primary_rows)
+
+    manifest = {
+        "panels": [
+            {
+                "cohort": "E005_core",
+                "split": "test",
+                "environment": "uniform_partner",
+                "path": "data/frozen_panels/E005_core/test__uniform_partner.csv",
+                "sha256": panels.sha256_file(core_panel),
+                "rows": 2,
+                "n_positive": 1,
+                "n_negative": 1,
+                "score_convention": "probability_clip_1e-7",
+                "evidence_semantics": "synthetic_unobserved_pair",
+            },
+            {
+                "cohort": "E005_primary",
+                "split": "test",
+                "environment": "uniform_partner",
+                "path": "data/frozen_panels/E005_primary/test__uniform_partner.csv",
+                "sha256": panels.sha256_file(primary_panel),
+                "rows": 2,
+                "n_positive": 1,
+                "n_negative": 1,
+                "score_convention": "raw_probability",
+                "evidence_semantics": "synthetic_unobserved_pair",
+            },
+        ]
+    }
+    (root / panels.PANEL_MANIFEST).write_text(json.dumps(manifest), encoding="utf-8")
+
+    # Scores differing only within 1e-7 verify the cohort-specific convention too.
+    core_preds = tmp_path / "core_preds.csv"
+    core_preds.write_text(
+        f"row_id,score\ncore_pos,1.0\ncore_neg,{1.0 - 5e-8}\n", encoding="utf-8"
+    )
+    out_default = tmp_path / "out_default"
+    assert (
+        evaluate_predictions.main(
+            [
+                "--root",
+                str(root),
+                "--predictions",
+                str(core_preds),
+                "--panel",
+                "uniform_partner",
+                "--bootstrap-replicates",
+                "10",
+                "--output",
+                str(out_default),
+            ]
+        )
+        == 0
+    )
+    default_report = json.loads((out_default / "report.json").read_text(encoding="utf-8"))
+    assert default_report["cohort"] == "E005_core"
+    assert default_report["results"][0]["score_convention"] == "probability_clip_1e-7"
+    assert default_report["results"][0]["auroc"] == pytest.approx(0.5)
+
+    primary_preds = tmp_path / "primary_preds.csv"
+    primary_preds.write_text(
+        f"row_id,score\nprimary_pos,1.0\nprimary_neg,{1.0 - 5e-8}\n", encoding="utf-8"
+    )
+    out_primary = tmp_path / "out_primary"
+    assert (
+        evaluate_predictions.main(
+            [
+                "--root",
+                str(root),
+                "--predictions",
+                str(primary_preds),
+                "--cohort",
+                "E005_primary",
+                "--panel",
+                "uniform_partner",
+                "--bootstrap-replicates",
+                "10",
+                "--output",
+                str(out_primary),
+            ]
+        )
+        == 0
+    )
+    primary_report = json.loads((out_primary / "report.json").read_text(encoding="utf-8"))
+    assert primary_report["cohort"] == "E005_primary"
+    assert primary_report["results"][0]["score_convention"] == "raw_probability"
+    assert primary_report["results"][0]["auroc"] == pytest.approx(1.0)
+
+
 def test_broken_panel_resolves_the_scored_endpoint(tmp_path: Path) -> None:
     """A broken-pair positive scores the shifted partner, not the true partner.
 

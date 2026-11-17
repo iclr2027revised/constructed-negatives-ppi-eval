@@ -335,7 +335,7 @@ def _render_measured_transfer(tables: dict[str, pd.DataFrame], output: Path) -> 
 
 
 def _render_replication(tables: dict[str, pd.DataFrame], output: Path) -> list[str]:
-    """Redraw Figure 5 using matched common-512 E005-minus-E003 AUPRC deltas and cohort retention."""
+    """Redraw Appendix Figure 15 (formerly R2 Figure 5) using matched common-512 E005-minus-E003 AUPRC deltas and cohort retention."""
     merged = tables["replication"].copy()
     if len(merged) != 144:
         raise ValueError(f"expected 144 matched-test replication values, found {len(merged)}")
