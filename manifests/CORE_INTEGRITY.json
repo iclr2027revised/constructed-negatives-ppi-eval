@@ -130,8 +130,8 @@
       "sha256": "12f223bd2912544444d809f85ea0b52c6a3b00ea18a5dfe4488ecdb32fde7cec"
     },
     "figures/R2/fig03_corrected_shuffling_final.pdf": {
-      "bytes": 35521,
-      "sha256": "52651ab574880fdefde06f3a9717353b8b6af345371235e0d34ad4809ed8f29e"
+      "bytes": 61265,
+      "sha256": "ec70c8fbeedaa999b9287b30f4b7a74e8c88fa18b42a5422a69d19c0ba5c3e40"
     },
     "figures/R2/fig04_absolute_measured.pdf": {
       "bytes": 20818,
@@ -387,19 +387,19 @@
     },
     "manifests/PAPER_ARTWORK_BINDING.json": {
       "bytes": 411,
-      "sha256": "9c35bd1ccefddf8280d21a34f168f108a17474eea98b13329a677419309e2764"
+      "sha256": "eb3717f8fc95a4b1b03e9d5e1c589f22782078ece10eba6ed3b835855f110dad"
     },
     "manifests/PROVENANCE.csv": {
       "bytes": 48840,
       "sha256": "8866c2ff6477cf2bc8720edb4a8f42cf6c14c69dfcb8aa911b8d4b326e282e50"
     },
     "manifests/R2_FIGURES.csv": {
-      "bytes": 13038,
-      "sha256": "f84e33ab353fd36624c46963f055765581092e9e1526d986a8f0fe5df4e9d0b4"
+      "bytes": 13104,
+      "sha256": "b2207e3bac184d17229f51393d16ded9eecb60e8751773339d668b64cd3f46ca"
     },
     "manifests/RESOURCE_INVENTORY.csv": {
       "bytes": 451228,
-      "sha256": "5d9ce50a435969ae3db1a5366299e48bdd421b2cd0e58ba3845d1342d1067a58"
+      "sha256": "2ee99c56918d650a1328e897e9e3fcbfc8a7f528f8151e5fcc67bd7b019382d7"
     },
     "manifests/THIRD_PARTY_ATTRIBUTION.json": {
       "bytes": 439,

@@ -2,5 +2,5 @@
   "figure_count": 22,
   "historical_figure_count": 3,
   "note": "Private manuscript TeX/PDF are not distributed; paper_artwork_sha256 in R2_FIGURES.csv binds the 22 unique PDFs (5 main figures, 17 appendix figures) referenced in the final manuscript, plus 3 superseded historical R2 PDFs preserved for traceability.",
-  "paper_tex_sha256": "c86eb83070976ffcc840096b00fd52190fee386e0ccee353a1a3b6a0fc7e48f5"
+  "paper_tex_sha256": "de38ca529984e7dbcdae782f7c7c4cfbc5ff22389335208dfe64af06cdce19fa"
 }
